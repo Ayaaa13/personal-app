@@ -38,6 +38,7 @@ section {
   position: fixed;
   top: 0;
   bottom: 0;
+  left: 0;
   width: 30%;
   padding: 50px;
   background: var(--secondary-color);
@@ -499,6 +500,7 @@ section {
 .email input,
 .message textarea {
   font-size: 14px;
+  color: #787B80;
   border: none;
   background: none;
 
