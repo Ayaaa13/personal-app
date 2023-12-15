@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display+SC:wght@700&family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap");
+@import url('https://fonts.cdnfonts.com/css/modern-warfare');
 
 * {
   margin: 0;
@@ -11,16 +12,18 @@
 }
 
 :root {
-  --primary-color: #205d67;
+  --primary-color: #205D67;
   --secondary-color: #faeed1;
   --support-color: #fff;
   --support-color-2: #000;
+  --background-color: #373C42;
 }
 
 section {
   padding: 50px 100px;
   background: var(--support-color);
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25); */
+  border: 1px solid var(--background-color);
 }
 
 .container .left-side,
@@ -40,8 +43,9 @@ section {
   background: var(--secondary-color);
 }
 
-.navbar-menu a {
-  color: var(--support-color-2);
+.navbar-menu a,
+.information-content li {
+  color: var(--background-color);
 }
 
 .container .left-side .logo {
@@ -205,6 +209,10 @@ section {
   font-size: 40px;
 }
 
+.section-1 .this-is-me p {
+  color: var(--background-color);
+}
+
 .section-1 h1 span {
   color: var(--primary-color);
 }
@@ -219,9 +227,15 @@ section {
   background: none;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
-  font-weight: 600;
+  /* font-weight: 600; */
 
   cursor: pointer;
+}
+
+.section-1 .buttons .download-cv:hover {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--support-color);
 }
 
 .section-1 .buttons .hire-me {
@@ -231,6 +245,12 @@ section {
   color: var(--support-color);
 
   cursor: pointer;
+}
+
+.section-1 .buttons .hire-me:hover{
+  background: none;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
 }
 
 /* TECK STACK */
@@ -252,6 +272,7 @@ section {
 .tech-stack h1 {
   font-size: 30px;
   color: var(--primary-color);
+  font-weight: 500;
 }
 
 .tech-stack .languages {
@@ -264,9 +285,17 @@ section {
   align-items: center;
   justify-content: center;
   padding: 25px;
-  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--background-color);
+  border-radius: 10px;
+  /* box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25); */
+  
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
+.tech-stack .language:hover {
+  transform: translateY(-15px);
+}
 /* Sectiion 2 */
 .section-2 {
   display: flex;
@@ -282,7 +311,7 @@ section {
   font-size: 40px;
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
-  padding: 10px;
+  padding: 5px 50px;
 }
 
 .section-2 .eatnrun-logo-text h1 {
@@ -336,17 +365,28 @@ section {
   color: var(--primary-color);
 }
 
+.section-2 .title-and-description p {
+  color: var(--background-color);
+}
+
 .section-2 .buttons {
   display: flex;
   gap: 15px;
   align-items: center;
 }
+
 .section-2 .buttons .source-code {
   padding: 8px 16px;
   background: none;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
-  font-weight: 600;
+  /* font-weight: 600; */
+}
+
+.section-2 .buttons .source-code:hover {
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--support-color);
 }
 
 .section-2 .buttons .live-demo {
@@ -358,6 +398,11 @@ section {
   cursor: pointer;
 }
 
+.section-2 .buttons .live-demo:hover {
+  background: none;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
 /* CONTACT BUTTON AND CONTENT */
 .contact-button {
   position: fixed;
@@ -383,17 +428,60 @@ section {
   gap: 12px;
 
   position: fixed;
-  top: 25%;
+  /* top: 25%; */
   left: 30%;
   right: 30%;
-  bottom: 20%;
+  /* bottom: 20%; */
+
+  background: var(--background-color);
+  border-radius: 25px;
+  padding: 50px;
+
+  z-index: 10;
+}
+
+.contact-overlay {
+  display: none;
+}
+
+.contact-overlay.visible {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 
   background: var(--support-color);
-  padding: 50px;
+  filter: blur(300px);
+  z-index: 5;
+}
+.contact-content .circles {
+  display: flex;
+  gap: 10px;
+}
+
+.contact-content .circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--primary-color);
+}
+
+.contact-content .red {
+  background: red;
+}
+
+.contact-content .yellow {
+  background: yellow;
+}
+
+.contact-content .green {
+  background: green;
 }
 
 .contact-content h1 {
-  color: var(--primary-color);
+  color: var(--support-color);
 }
 
 .contact-content .contact-form {
@@ -403,6 +491,7 @@ section {
 }
 
 .contact-content label {
+  color: #787B80;
   font-size: 18px;
   font-weight: 600;
 }
@@ -410,20 +499,28 @@ section {
 .email input,
 .message textarea {
   font-size: 14px;
+  border: none;
+  background: none;
+
+  
 }
 .contact-content .input {
   display: flex;
   gap: 5px;
   flex-direction: column;
+  
 }
 
-.contact-content input {
+.email input {
   outline: none;
+  border-bottom: 1px solid #787B80;
+  
 }
 
 .contact-content .message textarea {
   resize: none;
   outline: none;
+  border: 1px solid #787B80;
 }
 
 .contact-content .sendmsgBtn {
@@ -458,6 +555,7 @@ section {
   .header {
     display: flex;
   }
+
 }
 
 @media screen and (max-width: 1100px) {

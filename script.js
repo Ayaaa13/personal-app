@@ -14,10 +14,17 @@ overlay.addEventListener("click", function () {
 
 const contactBtn = document.querySelector(".contact-button");
 const contactContent = document.querySelector(".contact-content");
+const contactOverlay = document.querySelector(".contact-overlay");
 
 contactBtn.addEventListener("click", function () {
-  contactContent.classList.toggle("visible");
+  contactContent.classList.add("visible");
+  contactOverlay.classList.add("visible")
 });
+
+contactOverlay.addEventListener("click", function() {
+  contactContent.classList.remove("visible");
+  contactOverlay.classList.remove("visible")
+})
 
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
