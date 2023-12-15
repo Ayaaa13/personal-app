@@ -1,0 +1,525 @@
+@import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display+SC:wght@700&family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: #205d67;
+  --secondary-color: #faeed1;
+  --support-color: #fff;
+  --support-color-2: #000;
+}
+
+section {
+  padding: 50px 100px;
+  background: var(--support-color);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+.container .left-side,
+.container .left-side .logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .left-side {
+  gap: 50px;
+
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  padding: 50px;
+  background: var(--secondary-color);
+}
+
+.navbar-menu a {
+  color: var(--support-color-2);
+}
+
+.container .left-side .logo {
+  align-items: center;
+}
+
+.container .left-side .logo img {
+  width: 180px;
+  height: 100px;
+}
+
+.container .left-side .logo span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.header {
+  display: none;
+}
+
+.bars-and-logo {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+
+.header i {
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+.header .logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+}
+.header .logo img {
+  width: 100px;
+}
+
+.logo .logo-name-with-color,
+.title {
+  color: var(--primary-color);
+}
+
+.title {
+  font-size: 24px;
+}
+
+.information span {
+  font-weight: 600;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.social-media ul {
+  display: flex;
+  gap: 15px;
+}
+
+.social-media img {
+  width: 25px;
+}
+
+.container .right-side {
+  margin-left: 30%;
+  padding: 100px 50px;
+
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+
+.menu-modal {
+  display: none;
+}
+
+.menu-modal.visible {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 50%;
+  padding: 50px;
+  background: var(--secondary-color);
+
+  z-index: 100;
+}
+
+.overlay {
+  display: none;
+}
+
+.overlay.visible {
+  display: flex;
+  background: var(--support-color);
+  filter: blur(300px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  z-index: 100;
+}
+.menu-modal .logo {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-modal .logo {
+  align-items: center;
+}
+
+.menu-modal .logo img {
+  width: 180px;
+  height: 100px;
+}
+
+.menu-modal .logo span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+/* Section 1 */
+.container .right-side .section-1 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-1 .introduce,
+.section-1 .this-is-me {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-1 .introduce {
+  gap: 12px;
+
+  width: 550px;
+}
+
+.section-1 .this-is-me {
+  gap: 16px;
+}
+
+.section-1 h1 {
+  font-size: 40px;
+}
+
+.section-1 h1 span {
+  color: var(--primary-color);
+}
+
+.section-1 .buttons {
+  display: flex;
+  gap: 25px;
+}
+
+.section-1 .buttons .download-cv {
+  padding: 8px 16px;
+  background: none;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.section-1 .buttons .hire-me {
+  padding: 10px 20px;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--support-color);
+
+  cursor: pointer;
+}
+
+/* TECK STACK */
+.tech-stack,
+.tech-stack .languages {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.tech-stack {
+  /* flex-direction: column; */
+
+  gap: 25px;
+  font-weight: 600;
+}
+
+.tech-stack h1 {
+  font-size: 30px;
+  color: var(--primary-color);
+}
+
+.tech-stack .languages {
+  gap: 30px;
+}
+
+.tech-stack .language {
+  /* height: 65px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.25);
+}
+
+/* Sectiion 2 */
+.section-2 {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+.section-2 .section-title {
+  display: flex;
+  justify-content: center;
+}
+
+.section-2 .section-title h1 {
+  font-size: 40px;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+  padding: 10px;
+}
+
+.section-2 .eatnrun-logo-text h1 {
+  color: #bc6103;
+  font-size: 24px;
+}
+
+.section-2 .agame-logo-text h1 {
+  font-family: "Modern Warfare", sans-serif;
+  color: #0e2954;
+  font-size: 60px;
+}
+.section-2 .eatnrun-logo-text p {
+  font-size: 16px;
+}
+
+.section-2 .logo-image-and-text {
+  display: flex;
+  align-items: center;
+}
+
+.section-2 .portfolios {
+  display: flex;
+  gap: 50px;
+  flex-direction: column;
+}
+.section-2 .portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-2 .agame {
+  flex-wrap: wrap-reverse;
+}
+
+.section-2 .portfolio-introduce,
+.section-2 .title-and-description {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+}
+
+.section-2 .portfolio-introduce {
+  width: 550px;
+}
+
+.section-2 .title-and-description h2 {
+  color: var(--primary-color);
+}
+
+.section-2 .buttons {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.section-2 .buttons .source-code {
+  padding: 8px 16px;
+  background: none;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  font-weight: 600;
+}
+
+.section-2 .buttons .live-demo {
+  padding: 8px 16px;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--support-color);
+
+  cursor: pointer;
+}
+
+/* CONTACT BUTTON AND CONTENT */
+.contact-button {
+  position: fixed;
+  left: 92.5%;
+  top: 90%;
+
+  z-index: 5;
+  cursor: pointer;
+}
+
+.contact-button i {
+  font-size: 45px;
+  color: var(--primary-color);
+}
+
+.contact-content {
+  display: none;
+}
+
+.contact-content.visible {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  position: fixed;
+  top: 25%;
+  left: 30%;
+  right: 30%;
+  bottom: 20%;
+
+  background: var(--support-color);
+  padding: 50px;
+}
+
+.contact-content h1 {
+  color: var(--primary-color);
+}
+
+.contact-content .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-content label {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.email input,
+.message textarea {
+  font-size: 14px;
+}
+.contact-content .input {
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+}
+
+.contact-content input {
+  outline: none;
+}
+
+.contact-content .message textarea {
+  resize: none;
+  outline: none;
+}
+
+.contact-content .sendmsgBtn {
+  padding: 10px 20px;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--support-color);
+  font-weight: 400;
+
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1300px) and (max-width: 1920px) {
+  .menu-modal.visible {
+    display: none;
+  }
+
+  .overlay.visible {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .container .left-side {
+    display: none;
+  }
+
+  .container .right-side {
+    margin-left: 0;
+  }
+
+  .header {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .contact-content.visible {
+    left: 20%;
+    right: 20%;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .container .right-side {
+    padding: 25px 50px;
+  }
+
+  .container .right-side .section-1 {
+    gap: 50px;
+  }
+  .menu-modal .logo img {
+    width: 100px;
+    height: 60px;
+  }
+
+  .menu-modal .logo span {
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .title {
+    font-size: 18px;
+  }
+
+  .navbar-menu li,
+  .information-content li {
+    font-size: 14px;
+  }
+
+  .contact-button {
+    left: 82.5%;
+  }
+
+  .contact-content.visible {
+    left: 15%;
+    right: 15%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  section {
+    padding: 25px 25px;
+  }
+  .container .right-side {
+    padding: 25px 25px;
+  }
+
+  .menu-modal.visible {
+    right: 30%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .contact-content.visible {
+    left: 5%;
+    right: 5%;
+  }
+}
