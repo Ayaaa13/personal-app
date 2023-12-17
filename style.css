@@ -38,7 +38,7 @@ section {
   top: 0;
   bottom: 0;
   left: 0;
-  width: 360px;
+  width: 25%;
   padding: 50px;
   background: var(--secondary-color);
 }
@@ -144,11 +144,11 @@ section {
 } */
 
 .container .right-side {
-  margin-left: 30%;
-  padding: 100px 50px;
+  margin-left: 25%;
+  padding: 50px;
 
   display: flex;
-  gap: 50px;
+  gap: 25px;
   flex-direction: column;
 }
 
@@ -208,14 +208,24 @@ section {
 }
 
 /* Section 1 */
+.me-and-tech-stack {
+  display: flex;
+  justify-content: space-between;}
+
 .container .right-side .section-1 {
   display: flex;
   flex-wrap: wrap;
-  gap: 100px;
+  gap: 15px;
   align-items: center;
   justify-content: center;
 
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+
+.container .right-side .section-1 img {
+  width: 225px;
+  height: 100%;
 }
 
 .section-1 .introduce,
@@ -226,17 +236,16 @@ section {
 
 .section-1 .introduce {
   gap: 12px;
-
-  width: 550px;
   padding-right: 50px;
+  width: 450px;
 }
 
 .section-1 .introduce .greetings{
-  font-size: 32px;
+  font-size: 24px;
 }
 
 .section-1 .introduce .what-i-do {
-  font-size: 16px;
+  font-size: 12px;
 }
 
 .section-1 .this-is-me {
@@ -315,15 +324,14 @@ section {
 .tech-stack-title {
   display: flex;
   width: 100%;
-  height: 85px;
+  /* height: 85px; */
   align-items: center;
-  padding: 0px 50px;
+  padding: 10px 50px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
-
 }
 
 .tech-stack h1 {
-  font-size: 30px;
+  font-size: 24px;
   color: var(--primary-color);
   font-weight: 700;
 }
@@ -348,23 +356,28 @@ section {
   transform: translateY(-15px);
 }
 
+.portfolio-and-social-media {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 /* Sectiion 2 */
 .section-2 {
   display: flex;
-  gap: 50px;
+  gap: 15px;
   flex-direction: column;
 }
 .section-2 .portfolio-title-h1 {
   display: flex;
   width: 100%;
-  height: 85px;
+  /* height: 85px; */
   align-items: center;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
-  padding: 0px 50px;
+  padding: 10px 50px;
 }
 
 .section-2 .portfolio-title-h1 h1 {
-  font-size: 30px;
+  font-size: 24px;
   color: var(--primary-color);
   /* border-bottom: 2px solid var(--primary-color); */
   /* padding: 5px 50px; */
@@ -412,6 +425,7 @@ section {
 .section-2 .portfolios {
   display: flex;
   gap: 25px;
+  flex-wrap: wrap;
   /* flex-direction: column; */
 }
 
@@ -501,13 +515,19 @@ section {
 .internet .social-media-title {
   display: flex;
   width: 100%;
-  height: 85px;
+  /* height: 85px; */
   align-items: center;
-  padding: 0px 50px;
+  padding: 10px 50px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
 
+  
   color: var(--primary-color);
 }
+
+.internet .social-media-title h1{
+  font-size: 24px;
+}
+
 .social-medias {
   display: flex;
   gap: 25px;
