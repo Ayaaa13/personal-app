@@ -152,7 +152,7 @@ header .logo img {
   gap: 15px;
   align-items: center;
   /* justify-content: center; */
-  /* width: 100%; */
+  width: 85%;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
@@ -170,7 +170,7 @@ header .logo img {
 .section-1 .introduce {
   gap: 12px;
   padding-right: 15px;
-  width: 450px;
+  width: 100%;
 }
 
 .section-1 .introduce .greetings{
@@ -253,7 +253,7 @@ header .logo img {
   font-weight: 600;
 }
 
-.tech-stack-title {
+/* .tech-stack-title {
   display: flex;
   width: 100%;
   height: 85px;
@@ -266,15 +266,16 @@ header .logo img {
   font-size: 24px;
   color: var(--primary-color);
   font-weight: 700;
-}
+} */
 
 .tech-stack .languages {
+  flex-direction: column;
   gap: 30px;
 
-  padding: 50px 25px;
+  padding: 15px 25px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
-  width: 100%;
-  height: 200px;
+  width: 150px;
+  /* height: 200px;  */
   
 }
 
