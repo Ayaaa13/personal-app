@@ -19,62 +19,21 @@
     <title>jnava.dev</title>
   </head>
   <body>
-    <div class="container">
-      <div class="left-side">
+    <header>
         <div class="logo">
           <img src="/images/logo/jeremiah.dev.png" alt="jeremiah.dev Logo" />
-          <span class="logo-name"
-            >jeremiah<span class="logo-name-with-color">.dev</span></span
-          >
         </div>
-        <div class="menu">
-          <div class="navbar">
-            <h1 class="menu-title title">Menu</h1>
+            <nav class="navbar-menu">
+              <a href="#about-me">About me</a>
+              <a href="#tech-stack">Tech Stack</a>
+              <a href="#portfolio">Portfolio</a>
+            </nav>
 
-            <ul class="navbar-menu">
-              <li><a href="#about-me">About me</a></li>
-              <li><a href="#tech-stack">Tech Stack</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-            </ul>
-        </div>
-      </div>
-        <div class="information">
-          <h1 class="info-title title">MY INFORMATION</h1>
-          <ul class="information-content">
-            <li class="email"><span>Email:</span> <br />aiahnava5@gmail.com</li>
-            <li class="address">
-              <span>Address:</span> <br />087 Townsite Proper Mariveles Bataan
-            </li>
-            <li class="phone-number">
-              <span>Phone Number:</span> <br />+63 9155434721
-            </li>
-          </ul>
-        </div>
+    </header>
+    
 
-        <!-- <div class="social-media">
-          <h1 class="social-media-title title">SOCIAL MEDIA</h1>
-          <ul>
-            <li>
-              <a href="https://www.facebook.com/ayaaa13"
-                ><img src="/images/social-media/facebook.png" alt="facebook"
-              /></a>
-            </li>
-            <li>
-              <a href="https://github.com/Ayaaa13"
-                ><img src="/images/social-media/github.png" alt="github"
-              /></a>
-            </li>
-            <li>
-              <a href="https://www.linkedin.com/in/jeremiah-nava-777985225/"
-                ><img src="/images/social-media/linkedin.png" alt="linkedin"
-              /></a>
-            </li>
-          </ul>
-        </div> -->
-      </div>
 
-      <div class="right-side">
-        <header class="header">
+        <!-- <header class="header">
           <div class="bars-and-logo">
             <i class="fa-solid fa-bars-staggered barsBtn"></i>
             <div class="logo">
@@ -105,24 +64,10 @@
               <li><a href="#techstack">Tech Stack</a></li>
               <li><a href="#portfolio">Portfolio</a></li>
             </ul>
-          </div>
+          </div> -->
 
-          <div class="information">
-            <h1 class="info-title title">MY INFORMATION</h1>
-            <ul class="information-content">
-              <li class="email">
-                <span>Email:</span> <br />aiahnava5@gmail.com
-              </li>
-              <li class="address">
-                <span>Address:</span> <br />087 Townsite Proper Mariveles Bataan
-              </li>
-              <li class="phone-number">
-                <span>Phone Number:</span> <br />+63 9155434721
-              </li>
-            </ul>
-          </div>
-
-          <div class="social-media">
+          
+          <!-- <div class="social-media">
             <h1 class="social-media-title title">SOCIAL MEDIA</h1>
             <ul>
               <li>
@@ -142,8 +87,9 @@
               </li>
             </ul>
           </div>
-        </div>
+        </div> -->
 
+        <main class="container">
         <div class="me-and-tech-stack">
         <section class="section-1" id="about-me">
           <img src="/images/myself/About Me picture.png" alt="jeremiahnava" />
@@ -197,9 +143,9 @@
 
       <div class="portfolio-and-social-media">
         <div class="internet" id="internet">
-          <div class="social-media-title">
+          <!-- <div class="social-media-title">
             <h1>SOCIAL MEDIA</h1>
-          </div>
+          </div> -->
           <div class="social-medias">
             <a href="" class="social-media facebook">
               <img src="/images/social-media/facebook.png" alt="facebook" />
@@ -280,12 +226,53 @@
               </div>
               
             </div>
+
+            <div class="portfolio calculator">
+              <div class="calculator-logo-text">
+                <h1>Calculator</h1>
+              </div>
+
+              <div class="portfolio-introduce">      
+                <div class="title-and-description">
+                  <h2 class="portfolio-title">Calculator</h2>
+                  <p class="portfolio-description">
+                    Welcome to AGAME, your go-to destination for engaging
+                    arithmetic challenges! Immerse yourself in a world of fun
+                    and learning as you play and solve arithmetic operations on
+                    our interactive platform.
+                  </p>
+                </div>
+
+                <div class="buttons">
+                  <a
+                    href=""
+                    target="_blank"
+                    class="source-code button"
+                    >Source Code</a
+                  >
+                  <a href="" class="live-demo button">Live Demo</a>
+                </div>
+              </div>
+              
+            </div>
           </div>
         </section>
 
+        <div class="information">
+          <h1 class="info-title title">MY INFORMATION</h1>
+          <ul class="information-content">
+            <li class="email"><span>Email:</span> <br />aiahnava5@gmail.com</li>
+            <li class="address">
+              <span>Address:</span> <br />087 Townsite Proper Mariveles Bataan
+            </li>
+            <li class="phone-number">
+              <span>Phone Number:</span> <br />+63 9155434721
+            </li>
+          </ul>
+        </div>
         
       </div>
-
+    </main>
         <div class="contact-button">
           <!-- <img src="/images/message/chat.png" alt="" /> -->
           <i class="fa-solid fa-message"></i>
@@ -323,7 +310,6 @@
             />
           </form>
         </div>
-      </div>
     </div>
 
     <script src="/script.js"></script>
