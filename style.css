@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Alex+Brush&family=Playfair+Display+SC:wght@700&family=Poppins:ital,wght@0,300;0,400;0,700;1,700&display=swap");
-@import url('https://fonts.cdnfonts.com/css/modern-warfare');
+@import url("https://fonts.cdnfonts.com/css/modern-warfare");
 
 * {
   margin: 0;
@@ -12,11 +12,11 @@
 }
 
 :root {
-  --primary-color: #205D67;
+  --primary-color: #205d67;
   --secondary-color: #faeed1;
   --support-color: #fff;
   --support-color-2: #000;
-  --background-color: #373C42;
+  --background-color: #373c42;
 }
 
 section {
@@ -25,10 +25,11 @@ section {
   /* border: 1px solid var(--background-color); */
 }
 
-
 header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
 
   padding: 25px 200px;
 }
@@ -52,6 +53,32 @@ header .logo img {
   color: var(--primary-color);
 }
 
+.navbar-menu-modal {
+  display: none;
+}
+
+.navbar-menu-modal.visible {
+  display: flex;
+  gap: 25px;
+  background: var(--support-color);
+  padding: 25px 50px;
+
+  position: absolute;
+  top: 15%;
+  right: 19%;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-menu-modal a {
+  color: var(--support-color-2);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.navbar-menu-modal a:hover {
+  color: var(--primary-color);
+}
+
 .bars-and-logo {
   display: flex;
   gap: 30px;
@@ -71,9 +98,12 @@ header .logo img {
   font-weight: 600;
 }
 
-
 .information span {
   font-weight: 600;
+}
+
+.barsBtn {
+  display: none;
 }
 
 .container {
@@ -142,23 +172,19 @@ header .logo img {
 /* Section 1 */
 .me-and-tech-stack {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
 }
 
 .container .section-1 {
   display: flex;
+  flex-wrap: wrap;
   gap: 15px;
   align-items: center;
-  /* justify-content: center; */
-  width: 85%;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
-}
-
-.container .section-1 img {
-  width: 300px;
-  height: 100%;
+  justify-content: center;
+  width: 70%;
+  /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25); */
 }
 
 .section-1 .introduce,
@@ -169,11 +195,11 @@ header .logo img {
 
 .section-1 .introduce {
   gap: 12px;
-  padding-right: 15px;
-  width: 100%;
+  padding: 25px;
+  width: 500px;
 }
 
-.section-1 .introduce .greetings{
+.section-1 .introduce .greetings {
   font-size: 32px;
 }
 
@@ -232,54 +258,25 @@ header .logo img {
   cursor: pointer;
 }
 
-.section-1 .buttons .hire-me:hover{
+.section-1 .buttons .hire-me:hover {
   background: none;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 }
 
 /* TECK STACK */
-.tech-stack,
-.tech-stack .languages {
+.languages {
   display: flex;
-  align-items: center;
-  /* justify-content: center; */
-  flex-wrap: wrap;
-}
-
-.tech-stack {
+  gap: 25px;
   flex-direction: column;
-  gap: 15px;
-  font-weight: 600;
-}
-
-/* .tech-stack-title {
-  display: flex;
-  width: 100%;
-  height: 85px;
+  justify-content: center;
   align-items: center;
-  padding: 10px 50px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  padding: 25px 0px;
+  width: 100px;
 }
 
-.tech-stack h1 {
-  font-size: 24px;
-  color: var(--primary-color);
-  font-weight: 700;
-} */
-
-.tech-stack .languages {
-  flex-direction: column;
-  gap: 30px;
-
-  padding: 15px 25px;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
-  width: 150px;
-  /* height: 200px;  */
-  
-}
-
-.tech-stack .language img {
+.tech-stack img {
   cursor: pointer;
   transition: transform 0.3s ease;
 
@@ -287,27 +284,29 @@ header .logo img {
   width: 30px;
 }
 
-.tech-stack .language img:hover {
+.tech-stack img:hover {
   transform: translateY(-15px);
 }
 
 .portfolio-and-social-media {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 15px;
 }
 /* Sectiion 2 */
 .section-2 {
   display: flex;
   gap: 15px;
   flex-direction: column;
+  width: 70%;
 }
 .section-2 .portfolio-title-h1 {
   display: flex;
   width: 100%;
   /* height: 85px; */
   align-items: center;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25); */
   padding: 10px 50px;
 }
 
@@ -368,6 +367,7 @@ header .logo img {
 .section-2 .portfolios {
   display: flex;
   gap: 25px;
+  justify-content: center;
   flex-wrap: wrap;
   /* flex-direction: column; */
 }
@@ -379,7 +379,7 @@ header .logo img {
   align-items: center;
 
   width: 300px;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25); */
 }
 
 .section-2 .agame {
@@ -389,7 +389,7 @@ header .logo img {
 .section-2 .portfolio-introduce,
 .section-2 .title-and-description {
   display: flex;
-  
+
   flex-direction: column;
 }
 
@@ -463,11 +463,10 @@ header .logo img {
   padding: 10px 50px;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
 
-  
   color: var(--primary-color);
 }
 
-.internet .social-media-title h1{
+.internet .social-media-title h1 {
   font-size: 24px;
 }
 
@@ -478,13 +477,13 @@ header .logo img {
   justify-content: center;
   align-items: center;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
-  padding: 20px;
+  padding: 25px 0px;
 
-  width: 150px;
+  width: 100px;
   height: 100%;
 }
 
-.social-media img{
+.social-media img {
   width: 30px;
   height: 30px;
 }
@@ -513,10 +512,10 @@ header .logo img {
   gap: 12px;
 
   position: fixed;
-  /* top: 25%; */
-  left: 30%;
-  right: 30%;
-  /* bottom: 20%; */
+  top: 20%;
+  left: 35%;
+  right: 35%;
+  bottom: 20%;
 
   background: var(--background-color);
   border-radius: 25px;
@@ -541,6 +540,7 @@ header .logo img {
   filter: blur(300px);
   z-index: 5;
 }
+
 .contact-content .circles {
   display: flex;
   gap: 10px;
@@ -576,7 +576,7 @@ header .logo img {
 }
 
 .contact-content label {
-  color: #787B80;
+  color: #787b80;
   font-size: 18px;
   font-weight: 600;
 }
@@ -584,29 +584,25 @@ header .logo img {
 .email input,
 .message textarea {
   font-size: 14px;
-  color: #787B80;
+  color: #787b80;
   border: none;
   background: none;
-
-  
 }
 .contact-content .input {
   display: flex;
   gap: 5px;
   flex-direction: column;
-  
 }
 
 .email input {
   outline: none;
-  border-bottom: 1px solid #787B80;
-  
+  border-bottom: 1px solid #787b80;
 }
 
 .contact-content .message textarea {
   resize: none;
   outline: none;
-  border: 1px solid #787B80;
+  border: 1px solid #787b80;
 }
 
 .contact-content .sendmsgBtn {
@@ -620,20 +616,30 @@ header .logo img {
 }
 
 @media screen and (min-width: 1300px) and (max-width: 1920px) {
-  .menu-modal.visible {
-    display: none;
-  }
-
   .overlay.visible {
     display: none;
   }
 }
 
-@media screen and (max-width: 1300px) {
-  .container .left-side {
+@media screen and (min-width: 1100px) and (max-width: 1920px) {
+  .navbar-menu-modal.visible {
     display: none;
   }
+}
 
+@media screen and (max-width: 1310px) {
+  .portfolio-and-social-media {
+    flex-direction: column-reverse;
+  }
+
+  .social-medias {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .section-2 {
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 1100px) {
@@ -641,31 +647,56 @@ header .logo img {
     left: 20%;
     right: 20%;
   }
+
+  .navbar-menu {
+    display: none;
+  }
+
+  .barsBtn {
+    display: flex;
+    font-size: 24px;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 875px) {
+  header {
+    padding: 25px 100px;
+  }
+
+  .container {
+    padding: 50px;
+  }
+
+  .me-and-tech-stack {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .languages {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .container .section-1 {
+    width: 100%;
+  }
+
+  .navbar-menu-modal.visible {
+    right: 12%;
+  }
 }
 
 @media screen and (max-width: 750px) {
-
   .container .section-1 {
     gap: 50px;
   }
-  .menu-modal .logo img {
-    width: 100px;
-    height: 60px;
-  }
 
-  .menu-modal .logo span {
-    font-size: 16px;
-    font-weight: 700;
-  }
-
-  .title {
+  /* .title {
     font-size: 18px;
-  }
-
-  .navbar-menu li,
-  .information-content li {
-    font-size: 14px;
-  }
+  } */
 
   .contact-button {
     left: 82.5%;
@@ -681,12 +712,24 @@ header .logo img {
   section {
     padding: 25px 25px;
   }
-  .container .right-side {
-    padding: 25px 25px;
+
+  .navbar-menu-modal.visible {
+    top: 10%;
+    right: 5%;
   }
 
-  .menu-modal.visible {
-    right: 30%;
+  .navbar-menu-modal a {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  header {
+    padding: 15px 25px;
+  }
+
+  .container {
+    padding: 50px 25px;
   }
 }
 
