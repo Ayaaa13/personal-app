@@ -498,8 +498,11 @@ header .logo img {
 }
 
 .contact-button i {
-  font-size: 45px;
-  color: var(--primary-color);
+  background: var(--primary-color);
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 25px;
+  color: var(--support-color);
 }
 
 .contact-content {

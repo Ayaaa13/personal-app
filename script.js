@@ -17,10 +17,35 @@ const contactOverlay = document.querySelector(".contact-overlay");
 contactBtn.addEventListener("click", function () {
   contactContent.classList.add("visible");
   contactOverlay.classList.add("visible");
-  console.log("clicked");
 });
 
 contactOverlay.addEventListener("click", function () {
   contactContent.classList.remove("visible");
   contactOverlay.classList.remove("visible");
+});
+
+const email = document.querySelector("#email");
+const message = document.querySelector("#message");
+const submitBtn = document.querySelector(".sendmsgBtn");
+const contactForm = document.querySelector(".contact-form")[0];
+
+function sendEmail() {
+  // let body = {};
+
+  Email.send({
+    // Password: ac142091-9f07-4b89-bad3-2a501a0f925a
+    SecureToken: "ac142091-9f07-4b89-bad3-2a501a0f925a",
+    To: "jeremiahnava@jnava.dev",
+    From: "aiahnava5@gmail.com",
+    Subject: "Email from" + email.value,
+    Body: `
+      Email: ${email.value} 
+      Message: ${message.value}`,
+  }).then((message) => alert(message));
+}
+
+submitBtn.addEventListener("click", function (e) {
+  e.preventDefault();
+
+  sendEmail();
 });
