@@ -398,7 +398,7 @@ header .logo img {
 }
 .section-2 .portfolio-introduce {
   width: 300px;
-  width: 200px;
+  height: 200px;
   justify-content: space-between;
 }
 
