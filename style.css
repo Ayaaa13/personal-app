@@ -62,11 +62,9 @@ header .logo img {
   gap: 25px;
   background: var(--support-color);
   padding: 25px 50px;
-
-  position: absolute;
-  top: 15%;
-  right: 19%;
-  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  justify-content: center;
+  width: 100%;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
 .navbar-menu-modal a {
