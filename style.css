@@ -96,10 +96,6 @@ header .logo img {
   font-weight: 600;
 }
 
-.information span {
-  font-weight: 600;
-}
-
 .barsBtn {
   display: none;
 }
@@ -108,7 +104,7 @@ header .logo img {
   padding: 50px 200px;
 
   display: flex;
-  gap: 25px;
+  gap: 45px;
   flex-direction: column;
 }
 
@@ -288,10 +284,11 @@ header .logo img {
 
 .portfolio-and-social-media {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
   justify-content: center;
   gap: 15px;
 }
+
 /* Sectiion 2 */
 .section-2 {
   display: flex;
@@ -299,10 +296,10 @@ header .logo img {
   flex-direction: column;
   width: 70%;
 }
+
 .section-2 .portfolio-title-h1 {
   display: flex;
   width: 100%;
-  /* height: 85px; */
   align-items: center;
   /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25); */
   padding: 10px 50px;
@@ -485,6 +482,29 @@ header .logo img {
   width: 30px;
   height: 30px;
 }
+
+/* MY INFORMATION */
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+.information .info-title {
+  font-size: 24px;
+  color: var(--primary-color);
+}
+.information span {
+  font-weight: 600;
+}
+
+.information .information-text {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  font-weight: 500;
+}
 /* CONTACT BUTTON AND CONTENT */
 .contact-button {
   position: fixed;
@@ -513,10 +533,10 @@ header .logo img {
   gap: 12px;
 
   position: fixed;
-  top: 20%;
-  left: 35%;
-  right: 35%;
-  bottom: 20%;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  transform: translate(-50%, -50%);
 
   background: var(--background-color);
   border-radius: 25px;
@@ -644,9 +664,8 @@ header .logo img {
 }
 
 @media screen and (max-width: 1100px) {
-  .contact-content.visible {
-    left: 20%;
-    right: 20%;
+  header {
+    padding: 25px 100px;
   }
 
   .navbar-menu {
@@ -662,7 +681,7 @@ header .logo img {
 
 @media screen and (max-width: 875px) {
   header {
-    padding: 25px 100px;
+    padding: 25px 50px;
   }
 
   .container {
@@ -684,10 +703,6 @@ header .logo img {
   .container .section-1 {
     width: 100%;
   }
-
-  .navbar-menu-modal.visible {
-    right: 12%;
-  }
 }
 
 @media screen and (max-width: 750px) {
@@ -702,21 +717,11 @@ header .logo img {
   .contact-button {
     left: 82.5%;
   }
-
-  .contact-content.visible {
-    left: 15%;
-    right: 15%;
-  }
 }
 
 @media screen and (max-width: 700px) {
   section {
     padding: 25px 25px;
-  }
-
-  .navbar-menu-modal.visible {
-    top: 10%;
-    right: 5%;
   }
 
   .navbar-menu-modal a {
@@ -732,11 +737,15 @@ header .logo img {
   .container {
     padding: 50px 25px;
   }
+
+  .contact-content.visible {
+    width: 450px;
+  }
+
+  .section-2 .portfolio-title-h1 {
+    padding: 0px 0px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-  .contact-content.visible {
-    left: 5%;
-    right: 5%;
-  }
 }
