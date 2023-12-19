@@ -13,8 +13,14 @@ barsBtn.addEventListener("click", function () {
 const contactBtn = document.querySelector(".contact-button");
 const contactContent = document.querySelector(".contact-content");
 const contactOverlay = document.querySelector(".contact-overlay");
+const hireMeBtn = document.querySelector(".hire-me");
 
 contactBtn.addEventListener("click", function () {
+  contactContent.classList.add("visible");
+  contactOverlay.classList.add("visible");
+});
+
+hireMeBtn.addEventListener("click", function () {
   contactContent.classList.add("visible");
   contactOverlay.classList.add("visible");
 });
@@ -37,7 +43,7 @@ function sendEmail() {
     SecureToken: "ac142091-9f07-4b89-bad3-2a501a0f925a",
     To: "jeremiahnava@jnava.dev",
     From: "aiahnava5@gmail.com",
-    Subject: "Email from" + email.value,
+    Subject: "jnava.dev contact",
     Body: `
       Email: ${email.value} 
       Message: ${message.value}`,
