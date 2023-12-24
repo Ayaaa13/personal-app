@@ -333,6 +333,7 @@ header .logo img {
 /* Section 3 */
 .section-3 {
   display: flex;
+  flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
   
