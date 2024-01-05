@@ -14,18 +14,24 @@ const contactBtn = document.querySelector(".contact-button");
 const contactContent = document.querySelector(".contact-content");
 const contactOverlay = document.querySelector(".contact-overlay");
 const hireMeBtn = document.querySelector(".hire-me");
+const xButton = document.querySelector(".x-button");
 
 contactBtn.addEventListener("click", function () {
   contactContent.classList.add("visible");
   contactOverlay.classList.add("visible");
 });
 
-hireMeBtn.addEventListener("click", function () {
-  contactContent.classList.add("visible");
-  contactOverlay.classList.add("visible");
-});
+// hireMeBtn.addEventListener("click", function () {
+//   contactContent.classList.add("visible");
+//   contactOverlay.classList.add("visible");
+// });
 
 contactOverlay.addEventListener("click", function () {
+  contactContent.classList.remove("visible");
+  contactOverlay.classList.remove("visible");
+});
+
+xButton.addEventListener("click", function () {
   contactContent.classList.remove("visible");
   contactOverlay.classList.remove("visible");
 });
@@ -55,3 +61,11 @@ submitBtn.addEventListener("click", function (e) {
 
   sendEmail();
 });
+
+function scrollToSection(sectionId) {
+  let section = document.getElementById(sectionId);
+
+  if (section) {
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+}

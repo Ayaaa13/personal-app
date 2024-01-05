@@ -16,7 +16,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>jnava.dev</title>
+    <title>jnava</title>
   </head>
   <body>
     <header>
@@ -24,10 +24,35 @@
           <img src="/images/logo/jeremiah.dev.png" alt="jeremiah.dev Logo" />
         </div>
             <nav class="navbar-menu">
-              <a href="#about-me">About me</a>
-              <a href="#languages">Tech Stack</a>
-              <a href="#socialmedia">Social Media</a>
-              <a href="#portfolio">Portfolio</a>
+              <button onclick="scrollToSection('about-me')">About me</button>
+              <button onclick="scrollToSection('languages')" href="#languages">Tech Stack</button>
+              <button onclick="scrollToSection('information')" href="#socialmedia">Social Media</button>
+              <button onclick="scrollToSection('portfolio')" href="#portfolio">Portfolio</button>
+              <a
+                class="download-cv button"
+                href="/files/jnavaresume.pdf"
+                download="Jeremiah Nava Resume"
+                >Download CV</a
+              >
+
+              <span>|</span>
+
+              <div class="internet">
+                <div class="social-medias" id="socialmedia">
+                  <a href="https://web.facebook.com/ayaaa13" target="_blank" class="social-media facebook">
+                    <img src="/images/social-media/facebook.png" alt="facebook" />
+                  </a>
+                  <a href="https://github.com/Ayaaa13" target="_blank" class="social-media github">
+                    <img src="/images/social-media/github.png" alt="github" />
+                  </a>
+                  <a  href="https://www.linkedin.com/in/jeremiah-nava-777985225/" target="_blank" class="social-media linkedin">
+                    <img src="/images/social-media/linkedin.png" alt="linkedin" />
+                  </a>
+                  <a  href="" class="social-media youtube">
+                    <img src="/images/social-media/youtube.png" alt="javascript" />
+                  </a>
+                </div>
+              </div>
             </nav>
 
             <i class="fa-solid fa-bars-staggered barsBtn"></i>
@@ -35,80 +60,126 @@
     </header>
 
     <nav class="navbar-menu-modal">
-      <a href="#about-me">About me</a>
-      <a href="#languages">Tech Stack</a>
-      <a href="#socialmedia">Social Media</a>
-      <a href="#portfolio">Portfolio</a>
-  </nav>
+      <div class="buttons">
+        <button onclick="scrollToSection('about-me')">About me</button>
+        <button onclick="scrollToSection('languages')">Tech Stack</button>
+        <button onclick="scrollToSection('information')">Social Media</button>
+        <button onclick="scrollToSection('portfolio')">Portfolio</button>
+        <a
+                  class="download-cv button"
+                  href="/files/jnavaresume.pdf"
+                  download="Jeremiah Nava Resume"
+                  >Download CV</a
+                >
+      </div>
+              <div class="internet">
+                <div class="social-medias" id="socialmedia">
+                  <a href="https://web.facebook.com/ayaaa13" target="_blank" class="social-media facebook">
+                    <img src="/images/social-media/facebook.png" alt="facebook" />
+                  </a>
+                  <a href="https://github.com/Ayaaa13" target="_blank" class="social-media github">
+                    <img src="/images/social-media/github.png" alt="github" />
+                  </a>
+                  <a  href="https://www.linkedin.com/in/jeremiah-nava-777985225/" target="_blank" class="social-media linkedin">
+                    <img src="/images/social-media/linkedin.png" alt="linkedin" />
+                  </a>
+                  <a  href="" class="social-media youtube">
+                    <img src="/images/social-media/youtube.png" alt="javascript" />
+                  </a>
+                </div>
+              </div>
+    </nav>
 
         <main class="container">
-        <div class="me-and-tech-stack">
+
         <section class="section-1" id="about-me">
-          <img src="/images/myself/About Me picture.png" alt="jeremiahnava" />
-          <div class="introduce">
-            <div class="this-is-me">
-              <h1 class="greetings">Hi, I’m <span>Jeremiah Nava</span></h1>
-              <p class="what-i-do">
-                Welcome to my corner of the internet. I'm in my exciting journey
-                to become a web designer and front-end developer, and this is
-                where I showcase my passion for creating beautiful and
-                functional websites.
-              </p>
+            <div class="my-introduction">
+              <span class="hello">Hello,</span>
+              <h1 class="name">I'm Jeremiah G. Nava</h1>
+              <div class="description">
+                <i class="welcome-to-my-corner">
+                Welcome to my corner of the internet. I&#39;m in my exciting journey to become a web designer and web
+                developer, and this is where I showcase my passion for creating beautiful and functional websites.
+                </i>
+              </div>
             </div>
 
-            <div class="buttons">
-              <a
-                class="download-cv button"
-                href="/files/jnavaresume.pdf"
-                download="Jeremiah Nava Resume"
-                >Download CV</a
-              >
-              <button class="hire-me button">Hire Me</button>
-            </div>
-          </div>
+            <img class="me" src="images/myself/myself.png" />
+
         </section>
 
         
+        <section class="section-2" id="languages">
+          <div class="title-and-introducing">
+            <h1 class="title">CURRENT STUDIES AND SKILLS</h1>
+            <i>I am currently focusing on UI/UX design, and I possess proficiency in HTML, CSS, PHP, and JavaScript, including React.js for building dynamic and interactive web applications.</i>
+          </div>
+          <div class="languages-or-apps" >
+            <div class="language-or-app">
+              <div class="language-or-app-title">
+                <span>HTML, CSS & PHP</span>
+              </div>
+              <div class="language-or-app-image">
+                <img src="/images/tech-stack/html.png" alt="html" />        
+                <img src="/images/tech-stack/css.png" alt="css" />  
+                <img src="/images/tech-stack/php.png" alt="php" />  
+              </div>
+            </div>
+            
+            <div class="language-or-app">
+              <div class="language-or-app-title">
+                <span>Javascript & ReactJs</span>
+              </div>
+              <div class="language-or-app-image">
+                <img src="/images/tech-stack/js.png" alt="javascript" /> 
+                <img src="/images/tech-stack/react.png" alt="reactjs" /> 
+              </div>
+            </div>
+
+            <div class="language-or-app">
+              <div class="language-or-app-title">
+                <span>UI/UX Designer using Figma</span>
+              </div>
+              <div class="language-or-app-image">
+                <img src="/images/tech-stack/figma.png" alt="figma" />
+              </div>
+            </div>
+
+          </div>
+        </section>
+          
+        <section class="section-3" id="information">
+          <div class="information">
+            <h1 class="title">MY INFORMATION</h1>
+            <ul class="information-content">
+              <li class="email">
+                <span class="information-title">Email:</span> <br /><span class="information-text"><i class="fa-solid fa-envelope"></i>aiahnava5@gmail.com</span>
+              </li>
+  
+              <li class="address">
+                <span class="information-title">Address:</span> <br /><span class="information-text"><i class="fa-solid fa-location-dot"></i>087 Townsite Proper Mariveles Bataan</span>
+              </li>
+              <li class="phone-number">
+                <span class="information-title">Phone Number:</span> <br /><span class="information-text"><i class="fa-solid fa-phone"></i>+63 9155434721</span>
+              </li>
+            </ul>
+          </div>
+          <img src="/images/myself/AboutMePicture.png" alt="">
+        </section>
+
         
-          <div class="languages" id="languages">
-              <img src="/images/tech-stack/html.png" alt="html" />        
-              <img src="/images/tech-stack/css.png" alt="css" />         
-              <img src="/images/tech-stack/js.png" alt="javascript" /> 
-              <img src="/images/tech-stack/react.png" alt="reactjs" />  
-              <img src="/images/tech-stack/figma.png" alt="figma" />
-          </div>
-     
-      </div>
 
-      <div class="portfolio-and-social-media">
-        <div class="internet" id="internet">
-          <div class="social-medias" id="socialmedia">
-            <a href="" class="social-media facebook">
-              <img src="/images/social-media/facebook.png" alt="facebook" />
-            </a>
-            <a href="" class="social-media github">
-              <img src="/images/social-media/github.png" alt="github" />
-            </a>
-            <a  href="" class="social-media linkedin">
-              <img src="/images/social-media/linkedin.png" alt="linkedin" />
-            </a>
-            <a  href="" class="social-media youtube">
-              <img src="/images/social-media/youtube.png" alt="javascript" />
-            </a>
-          </div>
-        </div>
-        <section class="section-2" id="portfolio">
-          <div class="portfolio-title-h1"><h1>PORTFOLIO</h1></div>
-
+        <section class="section-4" id="portfolio">
+          <div class="title-and-introducing">
+            <h1 class="title">PORTFOLIO</h1>
+            <i>I am actively developing my portfolio, showcasing my UI/UX design projects and highlighting my skills in HTML, CSS, PHP, and JavaScript, with a strong emphasis on React.js for creating engaging and responsive web applications.</i>
+          </div>  
           <div class="portfolios">
             
             <div class="portfolio eatnrun">
               <div class="logo-image-and-text">
                 <img src="/images/logo/eatnrun logo.png" alt="Eat 'N Run" />
-                <div class="eatnrun-logo-text">
-                  <h1>EAT ‘N RUN</h1>
-                  <p>먹고 달려요</p>
-                </div>
+    
               </div>
 
               <div class="portfolio-introduce">
@@ -129,7 +200,7 @@
                     class="source-code button"
                     >Source Code</a
                   >
-                  <a href="https://eatnrun.jnava.dev/" class="live-demo button">Live Demo</a>
+                  <a href="https://eatnrun.jnava.dev/" target="_blank" class="live-demo button">Live Demo</a>
                 </div>
               </div>
             </div>
@@ -161,7 +232,7 @@
                     class="source-code button"
                     >Source Code</a
                   >
-                  <a href="https://agame.jnava.dev/" class="live-demo button">Live Demo</a>
+                  <a href="https://agame.jnava.dev/" target="_blank" class="live-demo button">Live Demo</a>
                 </div>
               </div>
               
@@ -190,7 +261,7 @@
                     class="source-code button"
                     >Source Code</a
                   >
-                  <a href="" class="live-demo button">Live Demo</a>
+                  <a href="calculator.jnava.dev" class="live-demo button">Live Demo</a>
                 </div>
               </div>
               
@@ -198,21 +269,6 @@
           </div>
         </section>
 
-        <div class="information">
-          <h1 class="info-title title">MY INFORMATION</h1>
-          <ul class="information-content">
-            <li class="email"><span>Email:</span> <br /><span class="information-text"><i class="fa-solid fa-envelope"></i>aiahnava5@gmail.com</li>
-
-            <li class="address">
-              <span>Address:</span> <br /><span class="information-text"><i class="fa-solid fa-location-dot"></i>087 Townsite Proper Mariveles Bataan</span>
-            </li>
-            <li class="phone-number">
-              <span>Phone Number:</span> <br /><span class="information-text"><i class="fa-solid fa-phone"></i>+63 9155434721</span>
-            </li>
-          </ul>
-        </div>
-        
-      </div>
     </main>
         <div class="contact-button">
           <!-- <img src="/images/message/chat.png" alt="" /> -->
@@ -222,12 +278,15 @@
         <div class="contact-overlay"></div>
 
         <div class="contact-content">
-          <div class="circles">
-            <div class="circle red"></div>
-            <div class="circle yellow"></div>
-            <div class="circle green"></div>
+          <div class="circles-and-x">
+            <div class="circles">
+              <div class="circle red"></div>
+              <div class="circle yellow"></div>
+              <div class="circle green"></div>
+            </div>
+
+            <i class="fa-solid fa-xmark x-button"></i>
           </div>
-          
           <h1>CONTACT</h1>
           <form class="contact-form" action="#">
             <div class="email input">
