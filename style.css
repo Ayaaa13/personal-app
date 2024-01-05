@@ -142,6 +142,7 @@ header .logo img {
   display: none;
 }
 
+<<<<<<< HEAD
 .internet .social-media-title {
   display: flex;
   align-items: center;
@@ -162,6 +163,14 @@ header .logo img {
 .social-media img {
   width: 20px;
   height: 20px;
+=======
+.container {
+  padding: 100px 200px;
+
+  display: flex;
+  gap: 100px;
+  flex-direction: column;
+>>>>>>> ad366b96aa4b9d6a85270d97777924347dbde16d
 }
 
 .menu-modal {
@@ -219,6 +228,7 @@ header .logo img {
   font-weight: 700;
 }
 
+<<<<<<< HEAD
 .title {
   font-size: 36px;
   text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.25);
@@ -277,11 +287,18 @@ header .logo img {
 }
 
 .languages-or-apps {
+=======
+/* Section 1 */
+.container .section-1 {
+>>>>>>> ad366b96aa4b9d6a85270d97777924347dbde16d
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
   justify-content: center;
+<<<<<<< HEAD
   align-items: center;
+=======
+>>>>>>> ad366b96aa4b9d6a85270d97777924347dbde16d
   /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25); */
 }
 
@@ -299,19 +316,84 @@ header .logo img {
   color: var(--support-color);
 }
 
+<<<<<<< HEAD
 .language-or-app-title {
+=======
+.section-1 .buttons .hire-me {
+  padding: 10px 20px;
+  background: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  color: var(--support-color);
+
+  font-size: 12px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.section-1 .buttons .hire-me:hover {
+  background: none;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+/* SECTION 2 */
+.section-2 {
+>>>>>>> ad366b96aa4b9d6a85270d97777924347dbde16d
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
   justify-content: center;
   align-items: flex-end;
   text-align: right;
   font-size: 24px;
 }
 
+=======
+}
+
+.section-2 .title {
+  color: var(--primary-color);
+}
+
+.languages-or-apps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25); */
+}
+
+.language-or-app {
+  display: flex;
+  padding: 75px 50px 50px 50px;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  width: 300px;
+  height: 300px;
+  background: #787B80;
+  box-shadow: 10px 10px 4px 0px rgba(0, 0, 0, 0.25);  
+}
+
+.language-or-app-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right
+}
+
+>>>>>>> ad366b96aa4b9d6a85270d97777924347dbde16d
 .language-or-app-image {
   display: flex;
   gap: 15px;
   align-items: center;
+<<<<<<< HEAD
+=======
+  
+>>>>>>> ad366b96aa4b9d6a85270d97777924347dbde16d
 }
 .tech-stack img {
   cursor: pointer;
@@ -325,12 +407,17 @@ header .logo img {
   transform: translateY(-15px);
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> ad366b96aa4b9d6a85270d97777924347dbde16d
 /* Section 3 */
 .section-3 {
   display: flex;
   flex-wrap: wrap;
   gap: 50px;
   justify-content: center;
+<<<<<<< HEAD
 
   background-color: var(--second-background-color);
 }
@@ -338,16 +425,51 @@ header .logo img {
 .information .information-title {
   font-weight: 500;
 }
+=======
+  
+}
+>>>>>>> ad366b96aa4b9d6a85270d97777924347dbde16d
 /* Section 4 */
 .section-4 {
   display: flex;
   gap: 25px;
   flex-direction: column;
+<<<<<<< HEAD
 
   background-color: var(--background-color);
   color: var(--support-color);
 }
 
+=======
+}
+
+.section-4 .portfolio-title-h1 {
+  display: flex;
+  align-items: center;
+  /* box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25); */
+  padding: 10px 50px;
+}
+
+.section-4 .portfolio-title-h1 h1 {
+  font-size: 24px;
+  color: var(--primary-color);
+  /* border-bottom: 2px solid var(--primary-color); */
+  /* padding: 5px 50px; */
+}
+
+.section-4 .portfolio-title {
+  font-size: 16px;
+}
+
+.section-4 .portfolio-title .portfolio-description {
+  font-size: 12px;
+}
+
+.section-4 .eatnrun-logo-text h1 {
+  color: #bc6103;
+  font-size: 24px;
+}
+>>>>>>> ad366b96aa4b9d6a85270d97777924347dbde16d
 .section-4 .agame-logo-text,
 .section-4 .calculator-logo-text {
   height: 130px;
@@ -367,6 +489,13 @@ header .logo img {
   font-size: 26px;
 }
 
+<<<<<<< HEAD
+=======
+.section-4 .eatnrun-logo-text p {
+  font-size: 16px;
+}
+
+>>>>>>> ad366b96aa4b9d6a85270d97777924347dbde16d
 .section-4 .logo-image-and-text {
   display: flex;
   gap: 5px;
@@ -410,10 +539,13 @@ header .logo img {
   flex-direction: column;
 }
 
+<<<<<<< HEAD
 .section-4 .portfolio-introduce {
   padding: 15px;
 }
 
+=======
+>>>>>>> ad366b96aa4b9d6a85270d97777924347dbde16d
 .section-4 .title-and-description {
   gap: 8px;
 }
@@ -471,6 +603,46 @@ header .logo img {
   border: 1px solid var(--primary-color);
 }
 
+<<<<<<< HEAD
+=======
+.internet {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.internet .social-media-title {
+  display: flex;
+  width: 100%;
+  /* height: 85px; */
+  align-items: center;
+  padding: 10px 50px;
+  box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+
+  color: var(--primary-color);
+}
+
+.internet .social-media-title h1 {
+  font-size: 24px;
+}
+
+.social-medias {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  
+  padding: 25px 0px;
+
+}
+
+.social-media img {
+  width: 30px;
+  height: 30px;
+}
+
+>>>>>>> ad366b96aa4b9d6a85270d97777924347dbde16d
 /* MY INFORMATION */
 .information {
   display: flex;
@@ -644,7 +816,27 @@ header .logo img {
   }
 }
 
+<<<<<<< HEAD
 @media screen and (max-width: 1400px) {
+=======
+@media screen and (max-width: 1310px) {
+
+  .social-medias {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .section-2 {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  header {
+    padding: 25px 100px;
+  }
+
+>>>>>>> ad366b96aa4b9d6a85270d97777924347dbde16d
   .navbar-menu {
     display: none;
   }
