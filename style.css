@@ -593,6 +593,7 @@ header .logo img {
   justify-content: space-between;
   align-items: center;
 }
+
 .contact-content .circles {
   display: flex;
   gap: 10px;
@@ -625,7 +626,7 @@ header .logo img {
 }
 
 .contact-content h1 {
-  color: var(--support-color);
+  color: var(--primary-color);
 }
 
 .contact-content .contact-form {
@@ -635,7 +636,7 @@ header .logo img {
 }
 
 .contact-content label {
-  color: #787b80;
+  color: var(--support-color-2);
   font-size: 18px;
   font-weight: 600;
 }
@@ -643,7 +644,7 @@ header .logo img {
 .email input,
 .message textarea {
   font-size: 14px;
-  color: #787b80;
+  color: var(--support-color-2);
   border: none;
   background: none;
 }
