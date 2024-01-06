@@ -338,9 +338,67 @@ header .logo img {
   background-color: var(--second-background-color);
 }
 
-.information .information-title {
+.information {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.information .information-text {
+  display: flex;
+  gap: 5px;
+  align-items: center;
   font-weight: 500;
 }
+
+.information-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.information .information-title {
+  font-weight: 600;
+}
+
+.information .buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.information .download-cv {
+  padding: 8px 16px;
+  background: none;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.information .download-cv:hover {
+  background: none;
+  color: var(--support-color);
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+}
+
+.information .hire-me-button {
+  padding: 8px 16px;
+  background: none;
+  color: var(--support-color);
+  border: 1px solid var(--primary-color);
+  background-color: var(--primary-color);
+
+  font-size: 12px;
+}
+
+.information .hire-me-button:hover {
+  background: none;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
 /* Section 4 */
 .section-4 {
   display: flex;
@@ -473,24 +531,6 @@ header .logo img {
   border: 1px solid var(--primary-color);
 }
 
-/* MY INFORMATION */
-.information {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  justify-content: center;
-}
-
-.information span {
-  font-weight: 600;
-}
-
-.information .information-text {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  font-weight: 500;
-}
 /* CONTACT BUTTON AND CONTENT */
 .contact-button {
   position: fixed;
@@ -656,6 +696,10 @@ header .logo img {
     font-size: 24px;
     cursor: pointer;
   }
+
+  .section-1 {
+    padding: 100px 50px 0px;
+  }
 }
 @media screen and (max-width: 1310px) {
   .social-medias {
@@ -670,17 +714,13 @@ header .logo img {
   .description {
     width: 80%;
   }
+
+  header {
+    padding: 25px 50px;
+  }
 }
 
 @media screen and (max-width: 1100px) {
-  header {
-    padding: 25px 100px;
-  }
-
-  .section-1 {
-    padding: 100px 100px 0px;
-  }
-
   .description {
     width: 85%;
   }
