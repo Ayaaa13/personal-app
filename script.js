@@ -5,41 +5,43 @@ barsBtn.addEventListener("click", function () {
   navbarMenuModal.classList.toggle("visible");
 });
 
-// overlay.addEventListener("click", function () {
-//   menuModal.classList.remove("visible");
-//   overlay.classList.remove("visible");
-// });
-
 const contactBtn = document.querySelector(".contact-button");
 const contactContent = document.querySelector(".contact-content");
 const contactOverlay = document.querySelector(".contact-overlay");
 const hireMeBtn = document.querySelector(".hire-me");
 const xButton = document.querySelector(".x-button");
+const hireBtn = document.querySelector(".hire-me-button");
 
-contactBtn.addEventListener("click", function () {
+function contactAdd() {
   contactContent.classList.add("visible");
   contactOverlay.classList.add("visible");
-});
+}
 
-// hireMeBtn.addEventListener("click", function () {
-//   contactContent.classList.add("visible");
-//   contactOverlay.classList.add("visible");
-// });
-
-contactOverlay.addEventListener("click", function () {
+function contactRemove() {
   contactContent.classList.remove("visible");
   contactOverlay.classList.remove("visible");
+}
+
+contactBtn.addEventListener("click", function () {
+  contactAdd();
+});
+
+hireBtn.addEventListener("click", function () {
+  contactAdd();
+});
+
+contactOverlay.addEventListener("click", function () {
+  contactRemove();
 });
 
 xButton.addEventListener("click", function () {
-  contactContent.classList.remove("visible");
-  contactOverlay.classList.remove("visible");
+  contactRemove();
 });
 
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
 const submitBtn = document.querySelector(".sendmsgBtn");
-const contactForm = document.querySelector(".contact-form")[0];
+const contactForm = document.querySelector(".contact-form");
 
 function sendEmail() {
   // let body = {};
