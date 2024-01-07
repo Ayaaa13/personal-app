@@ -34,6 +34,7 @@ header {
   align-items: center;
   justify-content: space-between;
   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.25);
+  background-color: var(--background-color);
 
   padding: 25px 200px;
 }
@@ -410,6 +411,7 @@ header .logo img {
   background-color: var(--primary-color);
 
   font-size: 12px;
+  cursor: pointer;
 }
 
 .information .hire-me-button:hover {
@@ -543,6 +545,68 @@ header .logo img {
   background: none;
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
+}
+
+/* FOOTER */
+footer {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  background-color: var(--second-background-color);
+
+  padding: 100px 150px;
+}
+
+.footer-logo {
+  width: 200px;
+  height: 100px;
+}
+
+.footer-main-content {
+  display: flex;
+  gap: 100px;
+  /* justify-content: center; */
+}
+
+footer .footer-title span {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.footer-social-media,
+.footer-site-map,
+.footer-contact-me,
+.social-media-content,
+.site-map-content,
+.contact-me-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-social-media,
+.footer-site-map,
+.footer-contact-me {
+  gap: 16px;
+}
+
+.social-media-content,
+.site-map-content,
+.contact-me-content {
+  gap: 8px;
+}
+
+.social-media-content a,
+.site-map-content,
+.contact-me-content span {
+  font-size: 16px;
+  color: var(--support-color-2);
+}
+
+/* COPYRIGHT */
+.copyright {
+  padding: 25px;
+  text-align: center;
+  background-color: var(--second-background-color);
 }
 
 /* CONTACT BUTTON AND CONTENT */
@@ -715,7 +779,23 @@ header .logo img {
   .section-1 {
     padding: 100px 50px 0px;
   }
+
+  footer {
+    flex-direction: column;
+  }
+
+  footer .footer-title span {
+    font-size: 20px;
+  }
+
+  .social-media-content a,
+  .site-map-content,
+  .contact-me-content span,
+  .copyright {
+    font-size: 14px;
+  }
 }
+
 @media screen and (max-width: 1310px) {
   .social-medias {
     flex-direction: row;
@@ -754,6 +834,15 @@ header .logo img {
   .description {
     padding-bottom: 0px;
     text-align: center;
+  }
+
+  footer {
+    gap: 50px;
+  }
+
+  .footer-main-content {
+    gap: 25px;
+    flex-direction: column;
   }
 }
 
@@ -794,6 +883,10 @@ header .logo img {
 
   .contact-button {
     left: 82.5%;
+  }
+
+  footer {
+    padding: 25px 50px;
   }
 }
 
