@@ -501,6 +501,17 @@ hr {
 .section-4 .title-and-description {
   gap: 8px;
 }
+
+.section-4 .portfolio-title {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.section-4 .portfolio-title .small-title {
+  font-size: 8px;
+}
+
 .section-4 .portfolio-introduce {
   width: 300px;
   height: 250px;
