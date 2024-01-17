@@ -475,11 +475,15 @@ header .logo img {
   align-items: center;
 
   /* height: 300px; */
-  background-color: var(--secondary-color);
-  border: 1px solid var(--primary-color);
+  background-color: var(--second-background-color);
   box-shadow: rgba(0, 0, 0, 0.25) 10px 10px 4px 0px;
 }
 
+hr {
+  height: 2px;
+  width: 100%;
+  background-color: var(--primary-color);
+}
 .section-4 .portfolio-introduce,
 .section-4 .title-and-description {
   display: flex;
