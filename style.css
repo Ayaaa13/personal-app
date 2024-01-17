@@ -90,6 +90,7 @@ header .logo img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 20px;
   gap: 5px;
   background: var(--support-color);
 
@@ -166,15 +167,17 @@ header .logo img {
 .social-medias {
   display: flex;
   gap: 25px;
-  justify-content: center;
-  align-items: center;
 
-  padding: 15px 0px;
+  /* 
+  padding: 15px 0px; */
+}
+
+.social-media {
+  height: 20px;
 }
 
 .social-media img {
   width: 20px;
-  height: 20px;
 }
 
 .menu-modal {
