@@ -23,39 +23,6 @@ buttons.forEach((button) => {
 });
 
 // CONTACT JAVASCRIPT
-// const contactBtn = document.querySelector(".contact-button");
-// const contactContent = document.querySelector(".contact-content");
-// const contactOverlay = document.querySelector(".contact-overlay");
-// const hireMeBtn = document.querySelector(".hire-me");
-// const xButton = document.querySelector(".x-button");
-// const hireBtn = document.querySelector(".hire-me-button");
-
-// function contactAdd() {
-//   contactContent.classList.add("visible");
-//   contactOverlay.classList.add("visible");
-// }
-
-// function contactRemove() {
-//   contactContent.classList.remove("visible");
-//   contactOverlay.classList.remove("visible");
-// }
-
-// contactBtn.addEventListener("click", function () {
-//   contactAdd();
-// });
-
-// hireBtn.addEventListener("click", function () {
-//   contactAdd();
-// });
-
-// contactOverlay.addEventListener("click", function () {
-//   contactRemove();
-// });
-
-// xButton.addEventListener("click", function () {
-//   contactRemove();
-// });
-
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
 const submitBtn = document.querySelector(".sendmsgBtn");
