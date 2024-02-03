@@ -339,7 +339,7 @@ section {
 #about-me .about-me-content {
   display: flex;
   gap: 50px;
-  /* justify-content: center; */
+  justify-content: center;
   flex-wrap: wrap;
 
   margin-bottom: 30px;
@@ -385,6 +385,10 @@ section {
   font-size: 32px;
 }
 
+#about-me .about-me-button {
+  display: flex;
+  justify-content: center;
+}
 /* 
  ----------
  CONTACT BUTTON AND CONTENT 
@@ -649,6 +653,15 @@ footer .footer-title span {
 }
 
 @media screen and (max-width: 1250px) {
+  header,
+  section {
+    padding: 25px 30px;
+  }
+
+  .navbar-menu-dropdown.visible {
+    padding: 25px 30px;
+  }
+
   header .bars {
     display: block;
     font-size: 40px;
@@ -658,17 +671,6 @@ footer .footer-title span {
 
   header .navbar-menu {
     display: none;
-  }
-}
-
-@media screen and (max-width: 1250px) {
-  header,
-  section {
-    padding: 25px 30px;
-  }
-
-  .navbar-menu-dropdown.visible {
-    padding: 25px 30px;
   }
 }
 
@@ -683,6 +685,11 @@ footer .footer-title span {
   }
 }
 
+@media screen and (max-width: 1045px) {
+  #about-me .about-me-content {
+    justify-content: flex-start;
+  }
+}
 @media screen and (max-width: 800px) {
   .navbar-menu-dropdown.visible,
   .download-cv {
