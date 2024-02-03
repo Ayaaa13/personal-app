@@ -1,51 +1,73 @@
-const barsBtn = document.querySelector(".barsBtn");
-const navbarMenuModal = document.querySelector(".navbar-menu-modal");
+// BARS BUTTON JAVASCRIPT
+const barsBtn = document.querySelector(".bars");
+const navbarMenuModal = document.querySelector(".navbar-menu-dropdown");
 
 barsBtn.addEventListener("click", function () {
   navbarMenuModal.classList.toggle("visible");
 });
 
-const contactBtn = document.querySelector(".contact-button");
-const contactContent = document.querySelector(".contact-content");
-const contactOverlay = document.querySelector(".contact-overlay");
-const hireMeBtn = document.querySelector(".hire-me");
-const xButton = document.querySelector(".x-button");
-const hireBtn = document.querySelector(".hire-me-button");
+// NAVBAR BUTTONs SCROLL INTO VIEW
 
-function contactAdd() {
-  contactContent.classList.add("visible");
-  contactOverlay.classList.add("visible");
-}
+const buttons = document.querySelectorAll(".nav-btn");
 
-function contactRemove() {
-  contactContent.classList.remove("visible");
-  contactOverlay.classList.remove("visible");
-}
+buttons.forEach((button) => {
+  button.addEventListener("click", (e) => {
+    e.preventDefault();
+    const sectionId = button.getAttribute("data-section");
+    let section = document.getElementById(sectionId);
 
-contactBtn.addEventListener("click", function () {
-  contactAdd();
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  });
 });
 
-hireBtn.addEventListener("click", function () {
-  contactAdd();
-});
+// CONTACT JAVASCRIPT
+// const contactBtn = document.querySelector(".contact-button");
+// const contactContent = document.querySelector(".contact-content");
+// const contactOverlay = document.querySelector(".contact-overlay");
+// const hireMeBtn = document.querySelector(".hire-me");
+// const xButton = document.querySelector(".x-button");
+// const hireBtn = document.querySelector(".hire-me-button");
 
-contactOverlay.addEventListener("click", function () {
-  contactRemove();
-});
+// function contactAdd() {
+//   contactContent.classList.add("visible");
+//   contactOverlay.classList.add("visible");
+// }
 
-xButton.addEventListener("click", function () {
-  contactRemove();
-});
+// function contactRemove() {
+//   contactContent.classList.remove("visible");
+//   contactOverlay.classList.remove("visible");
+// }
+
+// contactBtn.addEventListener("click", function () {
+//   contactAdd();
+// });
+
+// hireBtn.addEventListener("click", function () {
+//   contactAdd();
+// });
+
+// contactOverlay.addEventListener("click", function () {
+//   contactRemove();
+// });
+
+// xButton.addEventListener("click", function () {
+//   contactRemove();
+// });
 
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
 const submitBtn = document.querySelector(".sendmsgBtn");
 const contactForm = document.querySelector(".contact-form");
+const messageSent = document.querySelector(".message-sent");
+const messageSentOverlay = document.querySelector(".message-sent-overlay");
+const backBtn = document.querySelector(".back-btn");
+const errorMessage = document.querySelector(".error-message");
+const errorEmail = document.querySelector(".error-email");
+const errorTextarea = document.querySelector(".error-textarea");
 
 function sendEmail() {
-  // let body = {};
-
   Email.send({
     // Password: ac142091-9f07-4b89-bad3-2a501a0f925a
     SecureToken: "ac142091-9f07-4b89-bad3-2a501a0f925a",
@@ -53,21 +75,51 @@ function sendEmail() {
     From: "aiahnava5@gmail.com",
     Subject: "jnava.dev contact",
     Body: `
-      Email: ${email.value} 
+      Email: ${email.value}
       Message: ${message.value}`,
-  }).then((message) => alert(message));
+  }).then(() => {
+    messageSent.classList.add("visible");
+    messageSentOverlay.classList.add("visible");
+  });
 }
+
+function back() {
+  messageSent.classList.remove("visible");
+  messageSentOverlay.classList.remove("visible");
+}
+
+backBtn.addEventListener("click", function () {
+  back();
+});
 
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
 
-  sendEmail();
-});
+  if (email.value === "" && message.value === "") {
+    errorEmail.classList.add("visible");
+    errorTextarea.classList.add("visible");
+  } else {
+    // Remove error messages if they were previously shown
+    errorEmail.classList.remove("visible");
+    errorTextarea.classList.remove("visible");
 
-function scrollToSection(sectionId) {
-  let section = document.getElementById(sectionId);
+    if (email.value === "") {
+      errorEmail.classList.add("visible");
+    } else {
+      errorEmail.classList.remove("visible");
+    }
 
-  if (section) {
-    section.scrollIntoView({ behavior: "smooth" });
+    if (message.value === "") {
+      errorTextarea.classList.add("visible");
+    } else {
+      errorTextarea.classList.remove("visible");
+    }
+
+    // If no errors, proceed with sending email and reset values
+    if (email.value !== "" && message.value !== "") {
+      sendEmail();
+      email.value = "";
+      message.value = "";
+    }
   }
-}
+});

@@ -7,388 +7,668 @@
       href="/images/logo/jeremiah.dev.png"
       type="image/x-icon"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Raleway:wght@500;600;700&display=swap"
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
     />
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+
     <link rel="stylesheet" href="style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>jnava</title>
   </head>
   <body>
-    <header>
-        <div class="logo">
-          <img src="/images/logo/jeremiah.dev.png" alt="jeremiah.dev Logo" />
-        </div>
-            <nav class="navbar-menu">
+    <header class="main-header">
+      <!-- <img src="/images/logo/jeremiah.dev.png" alt="jeremiah.dev Logo" /> -->
+      <h1 class="logo">jnava<span>.dev</span></h1>
 
-              <button onclick="scrollToSection('about-me')">About me</button>
-              <button onclick="scrollToSection('languages')" href="#languages">Tech Stack</button>
-              <button onclick="scrollToSection('information')" href="#information">My Information</button>
-              <button onclick="scrollToSection('portfolio')" href="#portfolio">Portfolio</button>
+      <nav class="navbar-menu">
+        <li>
+          <a href="#Me" data-section="introduce-myself" class="nav-btn"
+            >Welcome</a
+          >
+          <a href="#TechStack" data-section="tech-stack" class="nav-btn"
+            >Tech Stack</a
+          >
+          <a href="#Information" data-section="about-me" class="nav-btn"
+            >About me</a
+          >
+          <a href="#Contact" data-section="contact" class="nav-btn">Contact</a>
+          <a href="#Portfolio" data-section="portfolio" class="nav-btn"
+            >Portfolio</a
+          >
 
-              <a
-                class="download-cv button"
-                href="/files/jnavaresume.pdf"
-                download="Jeremiah Nava Resume"
-                >Download CV</a
-              >
-
-              <span>|</span>
-
-              <div class="internet">
-                <div class="social-medias" id="socialmedia">
-                  <a href="https://www.facebook.com/jjjjnava" target="_blank" class="social-media facebook">
-                    <img src="/images/social-media/facebook.png" alt="facebook" />
-                  </a>
-                  <a href="https://github.com/Ayaaa13" target="_blank" class="social-media github">
-                    <img src="/images/social-media/github.png" alt="github" />
-                  </a>
-                  <a  href="https://www.linkedin.com/in/jeremiah-nava-777985225/" target="_blank" class="social-media linkedin">
-                    <img src="/images/social-media/linkedin.png" alt="linkedin" />
-                  </a>
-                </div>
-              </div>
-            </nav>
-
-            <i class="fa-solid fa-bars-staggered barsBtn"></i>
-            
+          <a
+            class="primary-btn download-cv"
+            href="/files/jnavaresume.pdf"
+            download="Jeremiah Nava Resume"
+            ><i class="ph ph-download-simple"></i>Download CV</a
+          >
+        </li>
+      </nav>
+      <i class="ph ph-text-align-right bars"></i>
     </header>
 
-    <nav class="navbar-menu-modal">
-      <div class="buttons">
-        <button onclick="scrollToSection('about-me')">About me</button>
-        <button onclick="scrollToSection('languages')">Tech Stack</button>
-        <button onclick="scrollToSection('information')">Social Media</button>
-        <button onclick="scrollToSection('portfolio')">Portfolio</button>
+    <div class="navbar-menu-dropdown">
+      <li>
+        <a href="#Me" data-section="introduce-myself" class="nav-btn"
+          >Welcome</a
+        >
+        <a href="#TechStack" data-section="tech-stack" class="nav-btn"
+          >Tech Stack</a
+        >
+        <a href="#Information" data-section="about-me" class="nav-btn"
+          >About me</a
+        >
+        <a href="#Contact" data-section="contact" class="nav-btn">Contact</a>
+        <a href="#Portfolio" data-section="portfolio" class="nav-btn"
+          >Portfolio</a
+        >
+
         <a
-                  class="download-cv button"
-                  href="/files/jnavaresume.pdf"
-                  download="Jeremiah Nava Resume"
-                  >Download CV</a
-                >
-      </div>
-              <div class="internet">
-                <div class="social-medias" id="socialmedia">
-                  <a href="https://www.facebook.com/jjjjnava" target="_blank" class="social-media facebook">
-                    <img src="/images/social-media/facebook.png" alt="facebook" />
-                  </a>
-                  <a href="https://github.com/Ayaaa13" target="_blank" class="social-media github">
-                    <img src="/images/social-media/github.png" alt="github" />
-                  </a>
-                  <a  href="https://www.linkedin.com/in/jeremiah-nava-777985225/" target="_blank" class="social-media linkedin">
-                    <img src="/images/social-media/linkedin.png" alt="linkedin" />
-                  </a>
-                </div>
-              </div>
-    </nav>
+          class="primary-btn download-cv"
+          href="/files/jnavaresume.pdf"
+          download="Jeremiah Nava Resume"
+          ><i class="ph ph-download-simple"></i>Download CV</a
+        >
+      </li>
+    </div>
 
-        <main class="container">
+    <main class="container">
+      <section id="introduce-myself">
+        <div class="left-side">
+          <div class="get-to-know-me">
+            <h2 class="greetings">
+              <span>Hello</span>, I am <i class="ph ph-hand-waving"></i>
+            </h2>
+            <h1 class="author-name"><span>Jeremiah</span> Nava</h1>
+            <p class="introduction">
+              Welcome to my corner of the internet. I'm in my exciting journey
+              to become a web designer and web developer, and this is where I
+              showcase my passion for creating beautiful and functional
+              websites.
+            </p>
 
-        <section class="section-1" id="about-me">
-            <div class="my-introduction">
-              <!-- <span class="hello">Hello,</span> -->
-              <h1 class="name">JEREMIAH NAVA</h1>
-              <img class="me" src="images/myself/myself.png" />
-              <div class="description">
-                <p class="welcome-to-my-corner">
-                Welcome to my corner of the internet. I&#39;m in my exciting journey to become a web designer and web
-                developer, and this is where I showcase my passion for creating beautiful and functional websites.      
-                </p>
-              </div>
-            </div>
-
-            
-
-        </section>
-
-        
-        <section class="section-2" id="languages">
-          <div class="title-and-introducing">
-            <h1 class="title">CURRENT STUDIES AND SKILLS</h1>
-            <p>I am currently focusing on UI/UX design, and I possess proficiency in HTML, CSS, PHP, and JavaScript, including React.js for building dynamic and interactive web applications.</p>
+            <a type="button" class="primary-btn lets-talk-button"
+              ><i class="ph-fill ph-chat-circle-dots"></i> LET'S TALK</a
+            >
           </div>
-          <div class="languages-or-apps" >
-            <div class="language-or-app">
-              <div class="language-or-app-title">
-                <span>HTML & CSS <!-- PHP --> </span>
-              </div>
-              <div class="language-or-app-image">
-                <img src="/images/tech-stack/html.png" alt="html" />        
-                <img src="/images/tech-stack/css.png" alt="css" />  
-                <!--<img src="/images/tech-stack/php.png" alt="php" />  -->
-              </div>
+          <div class="how-to-find-me">
+            <h3>Find Me on:</h3>
+            <div class="social-medias">
+              <a target="_blank" href="https://www.facebook.com/jjjjnava"
+                ><i class="ph-fill ph-facebook-logo"></i></a
+              ><a target="_blank" href="https://github.com/Ayaaa13"
+                ><i class="ph-fill ph-github-logo"></i></a
+              ><a
+                target="_blank"
+                href="https://www.linkedin.com/in/jeremiah-nava-777985225/"
+                ><i class="ph-fill ph-linkedin-logo"></i
+              ></a>
             </div>
-            
-            <div class="language-or-app">
-              <div class="language-or-app-title">
-                <span>Javascript & ReactJs</span>
-              </div>
-              <div class="language-or-app-image">
-                <img src="/images/tech-stack/js.png" alt="javascript" /> 
-                <img src="/images/tech-stack/react.png" alt="reactjs" /> 
-              </div>
-            </div>
-
-            <div class="language-or-app">
-              <div class="language-or-app-title">
-                <span>UI/UX Designer using Figma</span>
-              </div>
-              <div class="language-or-app-image">
-                <img src="/images/tech-stack/figma.png" alt="figma" />
-              </div>
-            </div>
-
           </div>
-        </section>
-          
-        <section class="section-3" id="information">
-          <div class="information">
-            <h1 class="title">MY INFORMATION</h1>
-            <ul class="information-content">
-              <li class="email">
-                <span class="information-title">Email:</span> <br /><span class="information-text"><i class="fa-solid fa-envelope"></i>aiahnava5@gmail.com</span>
+        </div>
+
+        <img
+          src="/images/myself/myself.jpeg"
+          alt="Jeremiah Nava"
+          class="author-image"
+        />
+      </section>
+
+      <section id="tech-stack">
+        <h1 class="title">CURRENT STUDIES AND SKILLS</h1>
+        <p class="description">
+          I am currently focusing on UI/UX design, and I possess proficiency in
+          HTML, CSS, PHP, and JavaScript, including React.js for building
+          dynamic and interactive web applications.
+        </p>
+
+        <div class="languages">
+          <div class="cards">
+            <div class="card">
+              <ion-icon name="logo-html5" class="language-icon"></ion-icon>
+              <div class="sub-title">HTML</div>
+            </div>
+
+            <div class="card">
+              <ion-icon name="logo-css3" class="language-icon"></ion-icon>
+              <div class="sub-title">CSS</div>
+            </div>
+
+            <div class="card">
+              <svg
+                width="60"
+                height="59"
+                viewBox="0 0 60 59"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <rect
+                  x="0.834961"
+                  y="0.452393"
+                  width="58.33"
+                  height="58.33"
+                  fill="url(#pattern0)"
+                />
+                <defs>
+                  <pattern
+                    id="pattern0"
+                    patternContentUnits="objectBoundingBox"
+                    width="1"
+                    height="1"
+                  >
+                    <use
+                      xlink:href="#image0_309_2"
+                      transform="scale(0.0111111)"
+                    />
+                  </pattern>
+                  <image
+                    id="image0_309_2"
+                    width="90"
+                    height="90"
+                    xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFoAAABaCAYAAAA4qEECAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC/UlEQVR4nO2cPWsUURSGJ42KYCGRuWc2URtBsVcbO4PYWImN4Ad7z6wKRrES/BMWFjZKsAiBe2ZFLfwJ8aMxNvoT7ARJqgiOXElkszv7FZw5dzLvA6fKzeyZJ2fe3IHlRhEAAAAAAAAAAAAAiI7fXDoQp+4BsXwklg1iyfdobZB1H4yV+ycW3+2v9E8/x915YvclAAl5teXW/L1XNsnNlCz/ZFcy2VtxkTe5DLvF0kVvZXLe6LLuffmirayr3yhri5b18kVr3ySHURDNEJ1rTyEmmvXFITpYXyoymiFafeIIEy3qkhAdrC8QGc1hFV5YGKJz7SnERLO+OEQH60tFRjNEq08cYaJFXRKig/UFBp/RxsrL0b+Zz5g73Thpy0WyskTW/Sq8DsvXgs98Ovxz3bP+9ca6b2X0VhPROzEdOUcs38MQPVlvtRTtobR7hqxshiZ6WG/BiiZ2NwzLI7LykKy75B/RgTVWnmuI3k1vwYo21n3asc7Km/4bittyQUP0bnqrj2iW3Odf75qks3wkCNET9FYr0ZRmV3rXnL7q9oUielxvNRLtfrfa7mTvmtatlaPjRCedtweP3V0+XFT+Z/9H9Pje6iHaymbM8rh/TWzdtXGip2Vq0RP2FrLos3GaLSQdd751/dXs4NXyGWJZVRI9dW/Bih6H8dur/usUiPaPtJdSVEknO1XGPrqot9qJnm2/PmSsPPG5OInoKl9YRvUWrOjtxzNOswVjs8sJS0rsXhgrP4Zep7pdx9S9hSx6cAvFo0t1ezdFRWUD0QLR22CiGdExMYgO0Y2OplUE0QLRFMAkYqJZXx6ig/XFIqMZotWnjjDRoi4K0cH6EpHRHE7hhYUhOteeQkw064tDdLC+VGQ0Q7T6xBEmWtQlITpYX2A4GY3j2HJi+VnFCwsOGLQVHDDoT53VfmxJuYx190oX7Q9A9QehNleyfPZfUI8qPNZ4rYmS52+7uahK/GT7U2d9Xu3pf5D2772t+riobJIBAAAAAAAAAAAAorD5A8UxfSiIrW0wAAAAAElFTkSuQmCC"
+                  />
+                </defs>
+              </svg>
+              <div class="sub-title">PHP</div>
+            </div>
+
+            <div class="card">
+              <ion-icon name="logo-javascript" class="language-icon"></ion-icon>
+              <div class="sub-title">JavaScript</div>
+            </div>
+
+            <div class="card">
+              <ion-icon name="logo-react" class="language-icon"></ion-icon>
+              <div class="sub-title">React</div>
+            </div>
+
+            <div class="card">
+              <ion-icon name="logo-figma" class="language-icon"></ion-icon>
+              <div class="sub-title">Figma</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about-me">
+        <h1 class="title">About Me</h1>
+        <p class="description">
+          Hey there! I'm Jeremiah G. Nava, a Computer Engineering graduate from
+          Bataan Heroes College. I love creating awesome websites – it's my
+          thing! Explore with me as I turn ideas into captivating online
+          experiences. 🚀
+        </p>
+
+        <div class="about-me-content">
+          <div class="personal-details">
+            <h2 class="sub-title"><span>~</span> Personal Details</h2>
+            <ul>
+              <li>
+                <h3>Name:</h3>
+                Jeremiah G. Nava
               </li>
-  
-              <li class="address">
-                <span class="information-title">Address:</span> <br /><span class="information-text"><i class="fa-solid fa-location-dot"></i>087 Townsite Proper Mariveles Bataan</span>
+              <li>
+                <h3>Email:</h3>
+                aiahnava5@gmail.com
               </li>
-              <li class="phone-number">
-                <span class="information-title">Phone Number:</span> <br /><span class="information-text"><i class="fa-solid fa-phone"></i>+63 9155434721</span>
+              <li>
+                <h3>Address:</h3>
+                087 Townsite Proper Mariveles, Bataan
+              </li>
+              <li>
+                <h3>Phone Number:</h3>
+                +63 9155434721
               </li>
             </ul>
-
-            <div class="buttons">
-              <a href="files/jnavaresume.pdf" download="Jeremiah Nava Resume" class="download-cv">Download CV</a>
-              <button class="hire-me-button">Hire Me</button>
-            </div>
           </div>
-          <img src="/images/myself/AboutMePicture.png" alt="">
-        </section>
 
-        
-
-        <section class="section-4" id="portfolio">
-          <div class="title-and-introducing">
-            <h1 class="title">PORTFOLIO</h1>
-            <p>I am actively developing my portfolio, showcasing my UI/UX design projects and highlighting my skills in HTML, CSS, PHP, and JavaScript, with a strong emphasis on React.js for creating engaging and responsive web applications.</p>
-          </div>  
-          <div class="portfolios">
-            
-            <div class="portfolio eatnrun">
-              <div class="logo-image-and-text">
-                <img src="/images/logo/eatnrun logo.png" alt="Eat 'N Run" />
-              </div>
-
-              <hr>
-              
-              <div class="portfolio-introduce">
-                <div class="title-and-description">
-                  <h2 class="portfolio-title">Eat ‘N Run <span class="small-title">using ReactJs</span></h2>
-                  <p class="portfolio-description">
-                    Eat N' Run, my passion project, is an enticing online
-                    restaurant where food enthusiasts can effortlessly order
-                    their favorite dishes for a delicious dining experience
-                    delivered right to their doorstep.
-                  </p>
+          <div class="my-interests">
+            <h2 class="sub-title"><span>~</span> My Interests</h2>
+            <ul>
+              <li>
+                <div class="card">
+                  <i class="ph ph-desktop-tower"></i>
+                  <p class="interest-title">Games</p>
                 </div>
-
-                <div class="buttons">
-                  <a
-                    href="https://github.com/Ayaaa13/e-commerce-app"
-                    target="_blank"
-                    class="source-code button"
-                    >Source Code</a
-                  >
-                  <a href="https://eatnrun.jnava.dev/" target="_blank" class="live-demo button">Live Demo</a>
+              </li>
+              <li>
+                <div class="card">
+                  <i class="ph ph-dribbble-logo"></i>
+                  <p class="interest-title">Sports</p>
                 </div>
-              </div>
-            </div>
-            
-            <div class="portfolio eatnrun">
-              <div class="logo-image-and-text">
-                <h1>OnLearn</h1>
-              </div>
-
-              <hr>
-              
-              <div class="portfolio-introduce">
-                <div class="title-and-description">
-                  <h2 class="portfolio-title">Online Course <span class="small-title">using ReactJs</span></h2>
-                  <p class="portfolio-description">
-                    onLearn, Unlock the doors to new skills, 
-                    enhanced knowledge, and a brighter future. 
-                    From business and technology to arts and personal 
-                    development, onLEARN has a course for everyone.
-                  </p>
+              </li>
+              <li>
+                <div class="card">
+                  <i class="ph ph-motorcycle"></i>
+                  <p class="interest-title">Travel</p>
                 </div>
-
-                <div class="buttons">
-                  <a
-                    href="https://github.com/Ayaaa13/online-course-app"
-                    target="_blank"
-                    class="source-code button"
-                    >Source Code</a
-                  >
-                  <a href="https://onlearn.jnava.dev/" target="_blank" class="live-demo button">Live Demo</a>
+              </li>
+              <li>
+                <div class="card">
+                  <i class="ph ph-coffee"></i>
+                  <p class="interest-title">Coffee</p>
                 </div>
-              </div>
-            </div>
-
-            <div class="portfolio online-course">
-              <div class="agame-logo-text">
-                <h1>AGame</h1>
-              </div>
-
-              <hr>
-              
-              <div class="portfolio-introduce">      
-                <div class="title-and-description">
-                  <h2 class="portfolio-title">AGAME <span class="small-title">using HTML, CSS and Javascript</span></h2>
-                  <p class="portfolio-description">
-                    Welcome to AGAME, your go-to destination for engaging
-                    arithmetic challenges! Immerse yourself in a world of fun
-                    and learning as you play and solve arithmetic operations.
-                    <br>
-                    <i><span>Username: user1</span></i>
-                    <br>
-                    <i><span>Password: pass1</span></i>
-                    <br>
-                  </p>
-                </div>
-
-                <div class="buttons">
-                  <a
-                    href="https://github.com/Ayaaa13/game-app"
-                    target="_blank"
-                    class="source-code button"
-                    >Source Code</a
-                  >
-                  <a href="https://agame.jnava.dev/" target="_blank" class="live-demo button">Live Demo</a>
-                </div>
-              </div>
-              
-            </div>
-
-            <div class="portfolio calculator">
-              <div class="calculator-logo-text">
-                <h1>Calculator</h1>
-              </div>
-
-              <hr>
-
-              <div class="portfolio-introduce">      
-                <div class="title-and-description">
-                  <h2 class="portfolio-title">Calculator <span class="small-title">using HTML, CSS and Javascript</span></h2>
-                  <p class="portfolio-description">
-                    Calculations made easy – our calculator provides a seamless and efficient way to solve arithmetic operations with precision.
-                  </p>
-                </div>
-
-                <div class="buttons">
-                  <a
-                    href="https://github.com/Ayaaa13/calculator"
-                    target="_blank"
-                    class="source-code button"
-                    >Source Code</a
-                  >
-                  <a href="https://calculator.jnava.dev/" target="_blank" class="live-demo button">Live Demo</a>
-                </div>
-              </div>
-              
-            </div>
+              </li>
+            </ul>
           </div>
-        </section>
-
-        <footer>
-          <img src="/images/logo/jeremiah.dev.png" alt="jnava Logo" class="footer-logo">
-
-          <div class="footer-main-content">
-            <div class="footer-social-media">
-              <div class="footer-title">
-                <span>Social Media</span>
-              </div>
-                <div class="social-media-content">
-                  <a href="https://www.facebook.com/jjjjnava" target="_blank" class="facebook">Facebook</a>
-                  <a href="https://github.com/Ayaaa13" target="_blank" class="github">GitHub</a>
-                  <a  href="https://www.linkedin.com/in/jeremiah-nava-777985225/" target="_blank" class="linkedin">LinkedIn</a>
-                </div>
-              
-            </div>
-
-            <div class="footer-site-map">
-              <div class="footer-title">
-                <span>Site Map</span>
-              </div>
-                <div class="site-map-content">
-                  <span>About Me</span>
-                  <span>Tech Stack</span>
-                  <span>My Information</span>
-                  <span>Portfolio</span>
-                </div>
-              </div>
-            
-
-            <div class="footer-contact-me">
-              <div class="footer-title">
-                <span>Contact Me</span>
-              </div>
-              <div class="contact-me-content">
-                <span>aiahnava5@gmail.com</span>
-                <span>+63 9155434721</span>
-                <span>087 Townsite Proper Mariveles, Bataan</span>
-              </div>  
-            </div>
-          </div>
-        </footer>
-
-        <div class="copyright">
-          Copyright © 2024 jnava.dev - All rights reserved.
-        </div>
-    </main>
-        <div class="contact-button">
-          <!-- <img src="/images/message/chat.png" alt="" /> -->
-          <i class="fa-solid fa-message"></i>
         </div>
 
-        <div class="contact-overlay"></div>
+        <a
+          class="primary-btn download-cv"
+          href="/files/jnavaresume.pdf"
+          download="Jeremiah Nava Resume"
+          ><i class="ph ph-download-simple"></i>Download CV</a
+        >
+      </section>
+
+      <section id="contact">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          data-name="Layer 1"
+          width="500.56679"
+          height="500.72746"
+          viewBox="0 0 830.56679 711.72746"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+          <polygon
+            points="68.348 169.893 455 169.893 455 296.824 440.354 296.824 440.354 330.021 407.157 296.824 68.348 296.824 68.348 169.893"
+            fill="#e6e6e6"
+          />
+          <rect
+            x="79.08798"
+            y="182.25349"
+            width="365.17166"
+            height="101.54506"
+            fill="#fff"
+          />
+          <rect
+            x="108.45338"
+            y="211.90022"
+            width="175.82079"
+            height="5.33572"
+            fill="#1864ab"
+          />
+          <rect
+            x="108.45338"
+            y="230.35817"
+            width="306.44088"
+            height="5.33572"
+            fill="#e6e6e6"
+          />
+          <rect
+            x="108.45338"
+            y="248.81612"
+            width="306.1408"
+            height="5.33572"
+            fill="#e6e6e6"
+          />
+          <polygon
+            points="386.652 339.785 0 339.785 0 466.717 14.646 466.717 14.646 499.914 47.843 466.717 386.652 466.717 386.652 339.785"
+            fill="#e6e6e6"
+          />
+          <rect
+            x="10.74034"
+            y="352.14621"
+            width="365.17165"
+            height="101.54507"
+            fill="#fff"
+          />
+          <rect
+            x="43.03493"
+            y="382.76932"
+            width="175.8208"
+            height="5.33572"
+            fill="#1864ab"
+          />
+          <rect
+            x="43.03493"
+            y="401.22726"
+            width="306.4409"
+            height="5.33572"
+            fill="#e6e6e6"
+          />
+          <rect
+            x="43.03493"
+            y="419.68521"
+            width="306.14082"
+            height="5.33572"
+            fill="#e6e6e6"
+          />
+          <polygon
+            points="386.652 0 0 0 0 126.931 14.646 126.931 14.646 160.129 47.843 126.931 386.652 126.931 386.652 0"
+            fill="#e6e6e6"
+          />
+          <rect
+            x="10.74034"
+            y="12.36079"
+            width="365.17165"
+            height="101.54506"
+            fill="#fff"
+          />
+          <rect
+            x="43.03493"
+            y="42.98392"
+            width="175.8208"
+            height="5.33572"
+            fill="#1864ab"
+          />
+          <rect
+            x="43.03493"
+            y="61.44186"
+            width="306.4409"
+            height="5.33572"
+            fill="#e6e6e6"
+          />
+          <rect
+            x="43.03493"
+            y="79.8998"
+            width="306.14082"
+            height="5.33572"
+            fill="#e6e6e6"
+          />
+          <polygon
+            points="679.314 695.51 663.401 695.509 655.83 634.126 679.317 634.128 679.314 695.51"
+            fill="#ffb8b8"
+          />
+          <path
+            d="M868.08957,805.072l-51.31317-.00191v-.649a19.97358,19.97358,0,0,1,19.97252-19.9722h.00126l31.34034.00127Z"
+            transform="translate(-184.71661 -94.13627)"
+            fill="#2f2e41"
+          />
+          <polygon
+            points="656.939 649.359 642.131 655.186 612.608 600.84 634.464 592.24 656.939 649.359"
+            fill="#ffb8b8"
+          />
+          <path
+            d="M851.08138,756.36359l-47.74953,18.7889-.23767-.60394a19.97357,19.97357,0,0,1,11.27144-25.89874l.00118-.00047,29.16382-11.47552Z"
+            transform="translate(-184.71661 -94.13627)"
+            fill="#2f2e41"
+          />
+          <path
+            d="M836.8057,769.70088l5.06736-186.22422-22.54834,79.833,16.29194,55.393-27.0288,22.97459L781.03553,653.772l-.0488-.15465L808.37141,508.8701l80.99068-3.91825.57931-.02916.09285.573c.078.48171,7.73193,48.54149,1.29553,83.29746C884.9184,623.416,869.4257,770.28906,869.2701,771.76965l-.06655.63128Z"
+            transform="translate(-184.71661 -94.13627)"
+            fill="#2f2e41"
+          />
+          <path
+            d="M812.567,520.48036l-.4573-.18254,15.03-137.88428.43861-.10965c15.275-3.81938,35.85564-3.48536,46.76457-2.94725a7.20471,7.20471,0,0,1,6.74793,6.09225l18.0698,119.01239-.149.213c-12.49252,17.84574-31.5815,22.697-48.64891,22.697A115.19974,115.19974,0,0,1,812.567,520.48036Z"
+            transform="translate(-184.71661 -94.13627)"
+            fill="#1864ab"
+          />
+          <path
+            d="M884.14261,560.76448l-.54318-.04944L874,379l29.17042,6.58833A13.17336,13.17336,0,0,1,913.296,400.092L909.513,430.29712l1.29616,53.13919c.90319,3.26416,15.67334,57.33506,7.46731,71.42353a6.54421,6.54421,0,0,1-4.06245,3.29205,101.77251,101.77251,0,0,1-24.05778,2.81541C886.47379,560.966,884.199,560.76955,884.14261,560.76448Z"
+            transform="translate(-184.71661 -94.13627)"
+            fill="#3f3d56"
+          />
+          <path
+            d="M798.23922,561.99662a10.32063,10.32063,0,0,1-5.77977-6.86677c-1.90082-7.6527,4.51594-17.27658,5.44226-18.61266l7.7614-73.73316-11.54465-68.11438a8.68128,8.68128,0,0,1,7.59724-10.07895l32.88368-3.66726-1.66916,70.0716c14.11383,47.70484-16.62247,116.48916-16.93463,117.17876l-.17271.38155h-.41864C815.23882,568.55535,811.20774,568.48056,798.23922,561.99662Z"
+            transform="translate(-184.71661 -94.13627)"
+            fill="#3f3d56"
+          />
+          <circle
+            cx="850.5182"
+            cy="335.04827"
+            r="31.8816"
+            transform="translate(-241.19863 354.88194) rotate(-28.6632)"
+            fill="#ffb8b8"
+          />
+          <path
+            d="M887.0246,527.87856a12.17184,12.17184,0,0,1,12.19193-14.13167l11.03525-25.532,17.15133,2.92184L911.3128,526.974a12.23781,12.23781,0,0,1-24.2882.90458Z"
+            transform="translate(-184.71661 -94.13627)"
+            fill="#ffb8b8"
+          />
+          <path
+            d="M902.56245,504.48348l9.11269-54.67683-15.56558-25.94339,3.96547-37.01235.88291-.22057a13.25148,13.25148,0,0,1,15.11177,7.10508l25.42746,53.06567.10173.21169-18.46815,72.55427Z"
+            transform="translate(-184.71661 -94.13627)"
+            fill="#3f3d56"
+          />
+          <path
+            d="M871.41419,360.757c.72863.21108,3.78825-3.24457,7.13869-7.38717a38.47235,38.47235,0,0,0,8.01955-31.25182c-.04646-.24665-.09286-.48076-.1391-.70078-1.1097-5.28044-6.14638-10.14433-11.425-9.02588.39869-4.67793-2.7522-9.0836-6.74525-11.55292s-8.72463-3.38457-13.3381-4.25517c-5.26309-.99319-10.59278-1.99089-15.938-1.65211a31.10761,31.10761,0,0,0-14.53307,4.6423,30.68254,30.68254,0,0,0-12.88638,33.15c6.71749-7.62794,14.67773-15.92507,26.18309-12.61913a21.10906,21.10906,0,0,1,7.15908,3.74434c6.99255,5.49218,10.50836,13.58,13.90909,21.48323,1.69861-4.32494,8.00012-5.95212,11.58033-2.99028,2.29806,1.90113,3.24415,5.0619,3.15731,8.04315a29.61549,29.61549,0,0,1-2.04145,8.6741"
+            transform="translate(-184.71661 -94.13627)"
+            fill="#2f2e41"
+          />
+          <path
+            d="M867.30308,479.86373h-1.5v-5.90137a6.60588,6.60588,0,0,0-6.59863-6.59863H840.40171a6.60588,6.60588,0,0,0-6.59863,6.59863V514.7651a6.60588,6.60588,0,0,0,6.59863,6.59863h18.80274a6.60588,6.60588,0,0,0,6.59863-6.59863V486.86373h1.5Z"
+            transform="translate(-184.71661 -94.13627)"
+            fill="#2f2e41"
+          />
+          <circle cx="665.58647" cy="392.72746" r="4" fill="#fff" />
+          <path
+            d="M853.5672,502.802a12.17181,12.17181,0,0,0-18.05914-4.7132L811.92965,483.3335,799.4682,495.47506l33.58994,20.36967A12.2378,12.2378,0,0,0,853.5672,502.802Z"
+            transform="translate(-184.71661 -94.13627)"
+            fill="#ffb8b8"
+          />
+          <path
+            d="M769.23545,474.69344l21.57512-81.50565a8.72409,8.72409,0,0,1,9.94554-6.31979l7.41787,1.34813,7.90433,43.47285L800.0025,468.33246l29.07887,17.45784-4.08907,32.71128Z"
+            transform="translate(-184.71661 -94.13627)"
+            fill="#3f3d56"
+          />
+          <path
+            d="M1014.28339,805.86373h-381a1,1,0,0,1,0-2h381a1,1,0,0,1,0,2Z"
+            transform="translate(-184.71661 -94.13627)"
+            fill="#3f3d56"
+          />
+        </svg>
 
         <div class="contact-content">
-          <div class="circles-and-x">
-            <div class="circles">
-              <div class="circle red"></div>
-              <div class="circle yellow"></div>
-              <div class="circle green"></div>
-            </div>
-
-            <i class="fa-solid fa-xmark x-button"></i>
-          </div>
-          <h1>CONTACT</h1>
-          <form class="contact-form" action="#">
+          <h1 class="title">CONTACT ME</h1>
+          <p class="description">
+            If you have any questions, inquiries, or if you'd like to discuss a
+            project, feel free to send me a message. I'm here to connect and
+            collaborate with you!
+          </p>
+          <form class="contact-form" action="#" method="post">
             <div class="email input">
-              <label for="email">Email: </label>
+              <label for="email"><h2>Email:</h2></label>
               <input type="text" name="email" id="email" />
+              <div class="error-email error-message">
+                Please fill up the form
+              </div>
             </div>
 
             <div class="message input">
-              <label for="message">Message: </label>
+              <label for="message"><h2>Message:</h2></label>
               <textarea
                 name="message"
                 id="message"
                 cols="30"
                 rows="10"
               ></textarea>
+              <div class="error-textarea error-message">
+                Please fill up the form
+              </div>
             </div>
-            <input
-              class="sendmsgBtn"
-              type="submit"
-              value="Send Message"
-            />
+            <button class="primary-btn sendmsgBtn" type="submit">
+              <i class="ph ph-paper-plane-right"></i> Send Message
+            </button>
+
+            <div class="message-sent">
+              <i class="ph-fill ph-check-circle"></i>
+              <h2>Message Sent</h2>
+              <p>Thank you for reaching out!</p>
+              <p>Please wait for my reply. Have a good day!</p>
+
+              <button type="button" class="primary-btn back-btn">
+                Back <i class="ph ph-arrow-right"></i>
+              </button>
+            </div>
+
+            <div class="message-sent-overlay"></div>
           </form>
         </div>
+      </section>
+
+      <section id="portfolio">
+        <h1 class="title">Portfolio</h1>
+        <p class="description">
+          I am actively developing my portfolio, showcasing my UI/UX design
+          projects and highlighting my skills in HTML, CSS, PHP, and JavaScript,
+          with a strong emphasis on React.js for creating engaging and
+          responsive web applications.
+        </p>
+
+        <div class="portfolio-content">
+          <ul>
+            <li>
+              <div class="card">
+                <img src="/images/portfolio/Eatnrun.png" alt="Eat N' Run" />
+
+                <div class="content">
+                  <h2 class="sub-title"><span>~</span> Eat N’ Run</h2>
+                  <p class="sub-description">
+                    Eat N' Run, my passion project, is an enticing online
+                    restaurant where food enthusiasts can effortlessly order
+                    their favorite dishes for a delicious dining experience
+                    delivered right to their doorstep.
+                  </p>
+                  <div class="buttons">
+                    <a
+                      href="https://github.com/Ayaaa13/e-commerce-app"
+                      class="portfolio-btn secondary-btn"
+                      target="_blank"
+                      ><i class="ph ph-github-logo"></i> Source Code</a
+                    >
+                    <a
+                      href="https://eatnrun.jnava.dev/"
+                      class="portfolio-btn primary-btn"
+                      target="_blank"
+                      ><i class="ph ph-hand-pointing"></i> Live Demo</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="card">
+                <img src="/images/portfolio/Agame.png" alt="Agame" />
+
+                <div class="content">
+                  <h2 class="sub-title"><span>~</span> AGame</h2>
+                  <p class="sub-description">
+                    Welcome to AGAME, your go-to destination for engaging
+                    arithmetic challenges! Immerse yourself in a world of fun
+                    and learning as you play and solve arithmetic operations on
+                    our interactive platform.
+                  </p>
+                  <div class="buttons">
+                    <a
+                      href="https://github.com/Ayaaa13/game-app"
+                      class="portfolio-btn secondary-btn"
+                      target="_blank"
+                      ><i class="ph ph-github-logo"></i> Source Code</a
+                    >
+                    <a
+                      href="https://agame.jnava.dev/"
+                      class="portfolio-btn primary-btn"
+                      target="_blank"
+                      ><i class="ph ph-hand-pointing"></i> Live Demo</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <div class="card">
+                <img src="/images/portfolio/Calculator.png" alt="Calculator" />
+
+                <div class="content">
+                  <h2 class="sub-title"><span>~</span> Calculator</h2>
+                  <p class="sub-description">
+                    Calculator, welcome to my simple online calculator, designed
+                    to help you perform basic arithmetic operations effortlessly
+                    with just a few clicks.
+                  </p>
+                  <div class="buttons">
+                    <a
+                      href="https://github.com/Ayaaa13/calculator"
+                      class="portfolio-btn secondary-btn"
+                      target="_blank"
+                      ><i class="ph ph-github-logo"></i> Source Code</a
+                    >
+                    <a
+                      href="https://calculator.jnava.dev/"
+                      class="portfolio-btn primary-btn"
+                      target="_blank"
+                      ><i class="ph ph-hand-pointing"></i> Live Demo</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <!-- <img src="/images/logo/jeremiah.dev.png" alt="jeremiah.dev Logo" /> -->
+      <h1 class="logo">jnava<span>.dev</span></h1>
+
+      <div class="footer-main-content">
+        <div class="footer-social-media">
+          <div class="footer-title">
+            <span>Social Media</span>
+          </div>
+          <div class="social-media-content">
+            <a
+              href="https://www.facebook.com/jjjjnava"
+              target="_blank"
+              class="facebook"
+              >Facebook</a
+            >
+            <a href="https://github.com/Ayaaa13" target="_blank" class="github"
+              >GitHub</a
+            >
+            <a
+              href="https://www.linkedin.com/in/jeremiah-nava-777985225/"
+              target="_blank"
+              class="linkedin"
+              >LinkedIn</a
+            >
+          </div>
+        </div>
+
+        <div class="footer-site-map">
+          <div class="footer-title">
+            <span>Site Map</span>
+          </div>
+          <div class="site-map-content">
+            <span>About Me</span>
+            <span>Tech Stack</span>
+            <span>My Information</span>
+            <span>Portfolio</span>
+          </div>
+        </div>
+
+        <div class="footer-contact-me">
+          <div class="footer-title">
+            <span>Contact Me</span>
+          </div>
+          <div class="contact-me-content">
+            <span>aiahnava5@gmail.com</span>
+            <span>+63 9155434721</span>
+            <span>087 Townsite Proper Mariveles, Bataan</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <div class="copyright">
+      Copyright © 2024 jnava.dev - All rights reserved.
     </div>
 
     <script src="https://smtpjs.com/v3/smtp.js"></script>
