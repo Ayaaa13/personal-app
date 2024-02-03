@@ -1,13 +1,17 @@
+// Overlay
+const headerOverlay = document.querySelector(".header-overlay");
+const messageSentOverlay = document.querySelector(".message-sent-overlay");
+
 // BARS BUTTON JAVASCRIPT
 const barsBtn = document.querySelector(".bars");
 const navbarMenuModal = document.querySelector(".navbar-menu-dropdown");
 
 barsBtn.addEventListener("click", function () {
-  navbarMenuModal.classList.toggle("visible");
+  navbarMenuModal.classList.add("visible");
+  headerOverlay.classList.add("visible");
 });
 
 // NAVBAR BUTTONs SCROLL INTO VIEW
-
 const buttons = document.querySelectorAll(".nav-btn");
 
 buttons.forEach((button) => {
@@ -28,7 +32,7 @@ const message = document.querySelector("#message");
 const submitBtn = document.querySelector(".sendmsgBtn");
 const contactForm = document.querySelector(".contact-form");
 const messageSent = document.querySelector(".message-sent");
-const messageSentOverlay = document.querySelector(".message-sent-overlay");
+
 const backBtn = document.querySelector(".back-btn");
 const errorMessage = document.querySelector(".error-message");
 const errorEmail = document.querySelector(".error-email");
