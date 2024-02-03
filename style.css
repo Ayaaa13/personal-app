@@ -40,6 +40,32 @@ body {
 
 /* 
  ----------
+ OVERLAY
+ ----------
+*/
+.header-overlay,
+.message-sent-overlay {
+  display: none;
+}
+
+.header-overlay.visible,
+.message-sent-overlay.visible {
+  display: block;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  background-color: var(--white-color);
+  filter: blur(250px);
+
+  z-index: 10;
+}
+
+/* 
+ ----------
  ALL SECTION 
  ----------
 */
@@ -109,6 +135,14 @@ header .bars {
   padding: 25px 150px;
   text-align: right;
   background-color: var(--white-color);
+
+  position: fixed;
+  top: 0;
+  left: 40%;
+  right: 0;
+  bottom: 0;
+
+  z-index: 100;
 }
 
 .navbar-menu-dropdown .logo {
@@ -118,8 +152,7 @@ header .bars {
 .navbar-menu-dropdown li {
   display: flex;
   gap: 25px;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
   text-transform: uppercase;
   font-weight: 600;
 }
@@ -370,6 +403,8 @@ section {
 #about-me .my-interests ul {
   display: flex;
   gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 #about-me .card {
@@ -493,21 +528,6 @@ section {
   z-index: 100;
 }
 
-#contact .message-sent-overlay {
-  display: none;
-}
-
-#contact .message-sent-overlay.visible {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-
-  background-color: var(--white-color);
-  filter: blur(250px);
-}
-
 #contact .message-sent .ph-check-circle {
   color: green;
   font-size: 100px;
@@ -629,8 +649,9 @@ footer .footer-title span {
  ----------
 */
 
-@media screen and (min-width: 1251px) and (max-width: 1920px) {
-  .navbar-menu-dropdown.visible {
+@media screen and (min-width: 1386px) and (max-width: 1920px) {
+  .navbar-menu-dropdown.visible,
+  .header-overlay.visible {
     display: none;
   }
 }
@@ -652,16 +673,7 @@ footer .footer-title span {
   }
 }
 
-@media screen and (max-width: 1250px) {
-  header,
-  section {
-    padding: 25px 30px;
-  }
-
-  .navbar-menu-dropdown.visible {
-    padding: 25px 30px;
-  }
-
+@media screen and (max-width: 1385px) {
   header .bars {
     display: block;
     font-size: 40px;
@@ -671,6 +683,17 @@ footer .footer-title span {
 
   header .navbar-menu {
     display: none;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  header,
+  section {
+    padding: 25px 30px;
+  }
+
+  .navbar-menu-dropdown.visible {
+    padding: 25px 30px;
   }
 }
 
@@ -691,10 +714,10 @@ footer .footer-title span {
   }
 }
 @media screen and (max-width: 800px) {
-  .navbar-menu-dropdown.visible,
+  /* .navbar-menu-dropdown.visible,
   .download-cv {
     font-size: 8px;
-  }
+  } */
 }
 
 @media screen and (max-width: 750px) {
@@ -703,12 +726,13 @@ footer .footer-title span {
   }
 }
 
-@media screen and (max-width: 450px) {
-  .navbar-menu-dropdown.visible,
-  .download-cv {
-    font-size: 6px;
+@media screen and (max-width: 500px) {
+  .navbar-menu-dropdown.visible {
+    left: 20%;
   }
+}
 
+@media screen and (max-width: 450px) {
   .navbar-menu-dropdown.visible {
     padding: 15px 30px;
   }
