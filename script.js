@@ -11,6 +11,11 @@ barsBtn.addEventListener("click", function () {
   headerOverlay.classList.add("visible");
 });
 
+headerOverlay.addEventListener("click", function () {
+  navbarMenuModal.classList.remove("visible");
+  headerOverlay.classList.remove("visible");
+});
+
 // NAVBAR BUTTONs SCROLL INTO VIEW
 const buttons = document.querySelectorAll(".nav-btn");
 
