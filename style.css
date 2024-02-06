@@ -467,12 +467,13 @@ section {
   gap: 100px;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 
 svg {
   filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
 }
+
 #contact .contact-content {
   display: flex;
   flex-direction: column;
