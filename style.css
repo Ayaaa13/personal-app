@@ -25,8 +25,8 @@
   --second-grey-color: #e9ecef;
   --black-color: #000;
   --white-color: #fff;
-  --box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
-  --image-box-shadow: 0 8px 5px 1px rgba(0, 0, 0, 0.25);
+  --box-shadow: 0 0px 24px rgba(0, 0, 0, 0.1);
+  --image-box-shadow: 0 0px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* 
@@ -85,6 +85,14 @@ header {
 
   padding: 25px 150px;
   box-shadow: var(--box-shadow);
+  background-color: var(--white-color);
+
+  /* position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
+  z-index: 100; */
 }
 
 header .navbar-menu li {
@@ -99,6 +107,15 @@ header .bars {
   display: none;
 }
 
+.nav-btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-btn.active {
+  color: var(
+    --primary-color
+  ); /* Set the text color when the button is clicked */
+}
 /* 
  ----------
  NAVBAR MENU DROPDOWN 
@@ -130,7 +147,8 @@ header .bars {
  ----------
 */
 .navbar-menu-dropdown.visible {
-  display: block;
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 5px 5px 0px rgba(0, 0, 0, 0.1);
   padding: 25px 150px;
   text-align: right;
@@ -143,6 +161,14 @@ header .bars {
   bottom: 0;
 
   z-index: 100;
+}
+
+.navbar-menu-dropdown .x-btn {
+  font-size: 28px;
+  margin-bottom: 25px;
+  font-weight: 700;
+
+  cursor: pointer;
 }
 
 .navbar-menu-dropdown .logo {
@@ -170,6 +196,7 @@ header .bars {
   font-size: 14px;
   font-weight: 600;
   border-radius: 5px;
+  text-transform: uppercase;
 
   display: inline-flex;
   gap: 5px;
@@ -200,6 +227,7 @@ header .bars {
   font-size: 14px;
   font-weight: 600;
   border-radius: 5px;
+  text-transform: uppercase;
 
   display: inline-flex;
   gap: 5px;
@@ -241,11 +269,12 @@ section {
   border-left: 5px solid var(--primary-color);
   padding-left: 25px;
   text-transform: uppercase;
-
+  line-height: 1.15;
   margin-bottom: 15px;
 }
 
 .description {
+  line-height: 1.4;
   margin-bottom: 25px;
 }
 
@@ -259,6 +288,8 @@ section {
   gap: 50px;
   flex-wrap: wrap;
   justify-content: center;
+
+  /* margin-top: 100px; */
 }
 
 #introduce-myself .left-side {
@@ -281,6 +312,8 @@ section {
 #introduce-myself .author-name {
   font-size: 55px;
   margin-bottom: 5px;
+  line-height: 1.15;
+  text-transform: uppercase;
 }
 
 #introduce-myself .introduction {
@@ -431,19 +464,23 @@ section {
 */
 #contact {
   display: flex;
-  gap: 50px;
+  gap: 100px;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: var(--primary-support-color);
 }
 
+svg {
+  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.2));
+}
 #contact .contact-content {
   display: flex;
   flex-direction: column;
   gap: 12px;
-
-  width: 500px;
+  padding: 50px;
+  background-color: var(--white-color);
+  box-shadow: var(--box-shadow);
+  width: 450px;
 }
 
 #contact .contact-content .contact-form {
@@ -461,6 +498,11 @@ section {
   color: red;
 }
 
+#contact .invalid-email.visible {
+  display: block;
+  color: red;
+}
+
 #contact .error-textarea.visible {
   display: block;
   color: red;
@@ -468,16 +510,20 @@ section {
 
 #contact .contact-content label {
   color: var(--support-color-2);
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 600;
 }
 
-#contact .email input,
-#contact .message textarea {
+#contact input {
   font-size: 14px;
   color: var(--support-color-2);
   border: none;
   background: none;
+  font-size: 14px;
+  padding: 5px;
+
+  outline: none;
+  border-bottom: 1px solid #787b80;
 }
 
 #contact .contact-content .input {
@@ -486,19 +532,8 @@ section {
   flex-direction: column;
 }
 
-#contact .email input {
-  outline: none;
-  border-bottom: 1px solid #787b80;
-}
-
-#contact .contact-content .message textarea {
-  resize: none;
-  outline: none;
-  border: 1px solid #787b80;
-}
-
 #contact .contact-content .sendmsgBtn {
-  margin-top: 10px;
+  margin-top: 30px;
   justify-content: center;
 }
 
@@ -542,6 +577,8 @@ section {
 #portfolio li {
   border-radius: 15px;
   box-shadow: var(--box-shadow);
+  background-color: var(--white-color);
+  width: 400px;
 
   padding: 10px;
 }
@@ -555,7 +592,6 @@ section {
 
 #portfolio .content {
   padding: 25px;
-  width: 350px;
 }
 
 #portfolio .card-image {
@@ -691,14 +727,27 @@ footer .footer-title span {
   }
 }
 
+@media screen and (max-width: 1317px) {
+  #contact {
+    gap: 50px;
+  }
+}
+
 @media screen and (max-width: 1250px) {
-  header,
-  section {
+  header {
     padding: 25px 30px;
+  }
+
+  section {
+    padding: 50px 30px;
   }
 
   .navbar-menu-dropdown.visible {
     padding: 25px 30px;
+  }
+
+  #contact {
+    padding: 100px 30px;
   }
 }
 
@@ -717,12 +766,6 @@ footer .footer-title span {
   #about-me .about-me-content {
     justify-content: flex-start;
   }
-}
-@media screen and (max-width: 800px) {
-  /* .navbar-menu-dropdown.visible,
-  .download-cv {
-    font-size: 8px;
-  } */
 }
 
 @media screen and (max-width: 750px) {
