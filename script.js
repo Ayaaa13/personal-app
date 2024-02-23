@@ -72,6 +72,62 @@ window.addEventListener("scroll", () => {
   });
 });
 
+const authorImage = document.querySelector(".author-image");
+const authorName = document.querySelector(".author-name");
+const authorIntro = document.querySelector(".introduction");
+const facebook = document.querySelector(".facebook");
+const github = document.querySelector(".github");
+const linkedin = document.querySelector(".linkedin");
+const aboutMeDescription = document.querySelector(".about-me-description");
+const aboutMeAuthorName = document.querySelector(".about-me-author-name");
+const aboutMeEmail = document.querySelector(".about-me-email");
+const aboutMeAddress = document.querySelector(".about-me-address");
+const aboutMePhone = document.querySelector(".about-me-phone");
+
+// Author Information
+const author = {
+  image: {
+    src: "/images/myself/myself.jpeg",
+  },
+  firstName: "Jeremiah",
+  lastName: "Nava",
+  fullName: function () {
+    return `${this.firstName} ${this.lastName}`;
+  },
+  introduction:
+    "Welcome to my corner of the internet. I'm in my exciting journey to become a web designer and web developer, and this is where Ishowcase my passion for creating beautiful and functional websites.",
+  socialMedia: {
+    facebook: {
+      href: "https://www.facebook.com/jjjjnava",
+    },
+    github: {
+      href: "https://github.com/Ayaaa13",
+    },
+    linkedin: {
+      href: "https://www.linkedin.com/in/jeremiah-nava-777985225/",
+    },
+  },
+  aboutMe: {
+    description:
+      "Hey there! I'm Jeremiah G. Nava, a Computer Engineering graduate from Bataan Heroes College. I love creating awesome websites – it's my thing! Explore with me as I turn ideas into captivating online experiences. 🚀",
+    email: "aiahnava5@gmail.com",
+    address: "087 Townsite Proper Mariveles, Bataan",
+    phone: "+63 9155434721",
+  },
+};
+
+authorImage.setAttribute("src", author.image.src);
+authorName.textContent = author.fullName();
+authorIntro.textContent = author.introduction;
+facebook.setAttribute("href", author.socialMedia.facebook.href);
+github.setAttribute("href", author.socialMedia.github.href);
+linkedin.setAttribute("href", author.socialMedia.linkedin.href);
+aboutMeDescription.textContent = author.aboutMe.description;
+aboutMeAuthorName.textContent = author.fullName();
+aboutMeEmail.textContent = author.aboutMe.email;
+aboutMeAddress.textContent = author.aboutMe.address;
+aboutMePhone.textContent = author.aboutMe.phone;
+
 // CONTACT JAVASCRIPT
 const email = document.querySelector("#email");
 const message = document.querySelector("#message");
