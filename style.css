@@ -70,7 +70,8 @@ body {
  ----------
 */
 section {
-  padding: 100px 100px;
+  /* padding: 100px 100px; */
+  width: 500px;
 }
 
 /* 
@@ -252,11 +253,22 @@ header .bars {
 
 /* 
  ----------
+ CONTAINER 
+ ----------
+*/
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+/* 
+ ----------
  ALL SECTION 
  ----------
 */
 section {
-  padding: 100px 150px;
+  padding: 100px 0px;
+  width: 600px;
 }
 
 /* 
@@ -301,7 +313,7 @@ section {
   width: 500px;
 }
 #introduce-myself .greetings span,
-#introduce-myself .author-name span {
+#introduce-myself .author-name {
   color: var(--primary-color);
 }
 
@@ -408,7 +420,7 @@ section {
   justify-content: center;
   flex-wrap: wrap;
 
-  margin-bottom: 30px;
+  margin: 30px 0px;
 }
 
 #about-me .personal-details ul li {
@@ -422,10 +434,6 @@ section {
 #about-me .sub-title {
   margin-bottom: 25px;
   font-size: 24px;
-}
-
-#about-me span {
-  color: var(--primary-color);
 }
 
 #about-me h3 {
@@ -790,6 +798,12 @@ footer .footer-title span {
 
   #tech-stack .sub-title {
     font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    width: 450px;
   }
 }
 
