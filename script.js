@@ -111,7 +111,7 @@ const author = {
     description:
       "Hey there! I'm Jeremiah G. Nava, a Computer Engineering graduate from Bataan Heroes College. I love creating awesome websites – it's my thing! Explore with me as I turn ideas into captivating online experiences. 🚀",
     email: "aiahnava5@gmail.com",
-    address: "087 Townsite Proper Mariveles, Bataan",
+    address: "#087 Townsite Proper Mariveles, Bataan",
     phone: "+63 9155434721",
   },
 };
