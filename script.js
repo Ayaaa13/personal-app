@@ -72,17 +72,11 @@ window.addEventListener("scroll", () => {
   });
 });
 
-const authorImage = document.querySelector(".author-image");
-const authorName = document.querySelector(".author-name");
-const authorIntro = document.querySelector(".introduction");
-const facebook = document.querySelector(".facebook");
-const github = document.querySelector(".github");
-const linkedin = document.querySelector(".linkedin");
-const aboutMeDescription = document.querySelector(".about-me-description");
-const aboutMeAuthorName = document.querySelector(".about-me-author-name");
-const aboutMeEmail = document.querySelector(".about-me-email");
-const aboutMeAddress = document.querySelector(".about-me-address");
-const aboutMePhone = document.querySelector(".about-me-phone");
+// const aboutMeDescription = document.querySelector(".about-me-description");
+// const aboutMeAuthorName = document.querySelector(".about-me-author-name");
+// const aboutMeEmail = document.querySelector(".about-me-email");
+// const aboutMeAddress = document.querySelector(".about-me-address");
+// const aboutMePhone = document.querySelector(".about-me-phone");
 
 // Author Information
 const author = {
@@ -97,15 +91,9 @@ const author = {
   introduction:
     "Welcome to my corner of the internet. I'm in my exciting journey to become a web designer and web developer, and this is where Ishowcase my passion for creating beautiful and functional websites.",
   socialMedia: {
-    facebook: {
-      href: "https://www.facebook.com/jjjjnava",
-    },
-    github: {
-      href: "https://github.com/Ayaaa13",
-    },
-    linkedin: {
-      href: "https://www.linkedin.com/in/jeremiah-nava-777985225/",
-    },
+    facebookhref: "https://www.facebook.com/jjjjnava",
+    githubhref: "https://github.com/Ayaaa13",
+    linkedinhref: "https://www.linkedin.com/in/jeremiah-nava-777985225/",
   },
   aboutMe: {
     description:
@@ -116,17 +104,76 @@ const author = {
   },
 };
 
-authorImage.setAttribute("src", author.image.src);
-authorName.textContent = author.fullName();
-authorIntro.textContent = author.introduction;
-facebook.setAttribute("href", author.socialMedia.facebook.href);
-github.setAttribute("href", author.socialMedia.github.href);
-linkedin.setAttribute("href", author.socialMedia.linkedin.href);
-aboutMeDescription.textContent = author.aboutMe.description;
-aboutMeAuthorName.textContent = author.fullName();
-aboutMeEmail.textContent = author.aboutMe.email;
-aboutMeAddress.textContent = author.aboutMe.address;
-aboutMePhone.textContent = author.aboutMe.phone;
+const introduceMyself = document.querySelector("#introduce-myself");
+const howToFindMe = document.querySelector(".how-to-find-me");
+const getToKnowMe = document.querySelector(".get-to-know-me");
+
+const displayGetToKnowMe = function (fullName, introduction) {
+  const html = ` 
+    <h2 class="greetings">
+    <span>Hello</span>, I am <i class="ph ph-hand-waving"></i>
+    </h2>
+    <h1 class="author-name">${fullName}</h1>
+    <p class="introduction">${introduction}</p>
+    `;
+
+  getToKnowMe.insertAdjacentHTML("afterbegin", html);
+};
+
+const displayHowToFindMe = function (socFacebook, socGithub, socLinkedIn) {
+  const html = `
+        <h3>Find Me on:</h3>
+        <div class="social-medias">
+          <a class="facebook" target="_blank" href=""
+            ><i class="ph-fill ph-facebook-logo"></i></a
+          ><a class="github" target="_blank" href=""
+            ><i class="ph-fill ph-github-logo"></i></a
+          ><a class="linkedin" target="_blank" href=""
+            ><i class="ph-fill ph-linkedin-logo"></i
+          ></a>
+        </div>   
+    `;
+  howToFindMe.insertAdjacentHTML("afterbegin", html);
+  // <img src="" alt="Jeremiah Nava" class="author-image" />
+
+  // Social Media
+  const facebook = document.querySelector(".facebook");
+  const github = document.querySelector(".github");
+  const linkedin = document.querySelector(".linkedin");
+
+  facebook.href = socFacebook;
+  github.href = socGithub;
+  linkedin.href = socLinkedIn;
+};
+
+const displayAuthorImage = function (image) {
+  const html = `
+    <img src="" alt="Jeremiah Nava" class="author-image" />
+  `;
+
+  introduceMyself.insertAdjacentHTML("beforeend", html);
+
+  // Author Image
+  const authorImage = document.querySelector(".author-image");
+  authorImage.src = image.src;
+};
+
+displayGetToKnowMe(author.fullName(), author.introduction);
+displayHowToFindMe(
+  author.socialMedia.facebookhref,
+  author.socialMedia.githubhref,
+  author.socialMedia.linkedinhref
+);
+displayAuthorImage(author.image);
+// authorImage.setAttribute("src", author.image.src);
+// authorName.textContent = author.fullName();
+// authorIntro.textContent = author.introduction;
+
+// aboutMeDescription.textContent = author.aboutMe.description;
+// aboutMeAuthorName.textContent = author.fullName();
+// aboutMeEmail.textContent = author.aboutMe.email;
+// aboutMeAddress.textContent = author.aboutMe.address;
+// aboutMePhone.textContent = author.aboutMe.phone;
 
 // CONTACT JAVASCRIPT
 const email = document.querySelector("#email");
