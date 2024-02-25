@@ -370,7 +370,7 @@ section {
   /* margin: 25px auto; */
 }
 
-#tech-stack .cards {
+#tech-stack .languages-cards {
   display: flex;
   gap: 50px;
   flex-wrap: wrap;
@@ -384,7 +384,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
 }
 
-#tech-stack .card {
+#tech-stack .language-card {
   display: flex;
   gap: 10px;
   flex-direction: column;
