@@ -72,11 +72,12 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// const aboutMeDescription = document.querySelector(".about-me-description");
-// const aboutMeAuthorName = document.querySelector(".about-me-author-name");
-// const aboutMeEmail = document.querySelector(".about-me-email");
-// const aboutMeAddress = document.querySelector(".about-me-address");
-// const aboutMePhone = document.querySelector(".about-me-phone");
+// Selecting Author Information
+const aboutMeDescription = document.querySelector(".about-me-description");
+const aboutMeAuthorName = document.querySelector(".about-me-author-name");
+const aboutMeEmail = document.querySelector(".about-me-email");
+const aboutMeAddress = document.querySelector(".about-me-address");
+const aboutMePhone = document.querySelector(".about-me-phone");
 
 // Author Information
 const author = {
@@ -86,10 +87,12 @@ const author = {
   firstName: "Jeremiah",
   lastName: "Nava",
   fullName: function () {
-    return `${this.firstName} ${this.lastName}`;
+    const [first, last] = `${this.firstName}, ${this.lastName}`.split(",");
+    const name = [first + last].join(" ");
+    return name;
   },
   introduction:
-    "Welcome to my corner of the internet. I'm in my exciting journey to become a web designer and web developer, and this is where Ishowcase my passion for creating beautiful and functional websites.",
+    "Welcome to my corner of the internet. I'm in my exciting journey to become a web designer and web developer, and this is where I showcase my passion for creating beautiful and functional websites.",
   socialMedia: {
     facebookhref: "https://www.facebook.com/jjjjnava",
     githubhref: "https://github.com/Ayaaa13",
@@ -100,7 +103,7 @@ const author = {
       "Hey there! I'm Jeremiah G. Nava, a Computer Engineering graduate from Bataan Heroes College. I love creating awesome websites – it's my thing! Explore with me as I turn ideas into captivating online experiences. 🚀",
     email: "aiahnava5@gmail.com",
     address: "#087 Townsite Proper Mariveles, Bataan",
-    phone: "+63 9155434721",
+    phone: "+63 9696451534",
   },
 };
 
@@ -157,6 +160,7 @@ const displayAuthorImage = function (image) {
   authorImage.src = image.src;
 };
 
+// Displaying Author Information
 displayGetToKnowMe(author.fullName(), author.introduction);
 displayHowToFindMe(
   author.socialMedia.facebookhref,
@@ -164,15 +168,12 @@ displayHowToFindMe(
   author.socialMedia.linkedinhref
 );
 displayAuthorImage(author.image);
-// authorImage.setAttribute("src", author.image.src);
-// authorName.textContent = author.fullName();
-// authorIntro.textContent = author.introduction;
 
-// aboutMeDescription.textContent = author.aboutMe.description;
-// aboutMeAuthorName.textContent = author.fullName();
-// aboutMeEmail.textContent = author.aboutMe.email;
-// aboutMeAddress.textContent = author.aboutMe.address;
-// aboutMePhone.textContent = author.aboutMe.phone;
+aboutMeDescription.textContent = author.aboutMe.description;
+aboutMeAuthorName.textContent = author.fullName();
+aboutMeEmail.textContent = author.aboutMe.email;
+aboutMeAddress.textContent = author.aboutMe.address;
+aboutMePhone.textContent = author.aboutMe.phone;
 
 // CONTACT JAVASCRIPT
 const email = document.querySelector("#email");
