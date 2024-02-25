@@ -134,7 +134,6 @@ const displayHowToFindMe = function (socFacebook, socGithub, socLinkedIn) {
         </div>   
     `;
   howToFindMe.insertAdjacentHTML("afterbegin", html);
-  // <img src="" alt="Jeremiah Nava" class="author-image" />
 
   // Social Media
   const facebook = document.querySelector(".facebook");
