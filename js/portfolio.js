@@ -1,11 +1,11 @@
 const allPortfolios = [
   {
-    image: "/images/portfolio/Eatnrun.png",
-    subTitle: "Eat N’ Run",
+    image: "/images/portfolio/Calculator.png",
+    subTitle: "Calculator",
     subSubcription:
-      "Eat N' Run, my passion project, is an enticing online restaurant where food enthusiasts can effortlessly order their favorite dishes for a delicious dining experience delivered right to their doorstep.",
-    githubHref: "https://github.com/Ayaaa13/e-commerce-app",
-    liveHref: "https://eatnrun.jnava.dev/",
+      "Calculator, welcome to my simple online calculator, designed to help you perform basic arithmetic operations effortlessly with just a few clicks.",
+    githubHref: "https://github.com/Ayaaa13/calculator",
+    liveHref: "https://calculator.jnava.dev/",
   },
 
   {
@@ -18,12 +18,12 @@ const allPortfolios = [
   },
 
   {
-    image: "/images/portfolio/Calculator.png",
-    subTitle: "Calculator",
+    image: "/images/portfolio/Eatnrun.png",
+    subTitle: "Eat N’ Run",
     subSubcription:
-      "Calculator, welcome to my simple online calculator, designed to help you perform basic arithmetic operations effortlessly with just a few clicks.",
-    githubHref: "https://github.com/Ayaaa13/calculator",
-    liveHref: "https://calculator.jnava.dev/",
+      "Eat N' Run, my passion project, is an enticing online restaurant where food enthusiasts can effortlessly order their favorite dishes for a delicious dining experience delivered right to their doorstep.",
+    githubHref: "https://github.com/Ayaaa13/e-commerce-app",
+    liveHref: "https://eatnrun.jnava.dev/",
   },
 ];
 
@@ -31,7 +31,6 @@ const displayPortfolios = function (ports) {
   const cards = document.querySelector(".portfolio-cards");
   ports.map((port) => {
     const html = `
-        <li>
             <div class="portfolio-card">
                 <div class="card-image">
                     <img src=${port.image} alt="Eat N' Run" />
@@ -43,12 +42,7 @@ const displayPortfolios = function (ports) {
                         ${port.subSubcription}
                     </p>
                     <div class="buttons">
-                    <a
-                        href=${port.githubHref}
-                        class="portfolio-btn secondary-btn"
-                        target="_blank"
-                        ><i class="ph ph-github-logo"></i> Source Code</a
-                    >
+                    
                     <a
                         href=${port.liveHref}
                         class="portfolio-btn primary-btn"
