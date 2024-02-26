@@ -177,8 +177,37 @@
             and responsive web applications.
           </p>
 
-          <div class="portfolio-content">
-            <ul class="portfolio-cards"></ul>
+          <div class="portfolio-buttons">
+            <button
+              class="portfolio-button usingLanguageBtn defaultBtn"
+              data-content="usingLanguageContent"
+            >
+              HTML, CSS & JS
+            </button>
+            <button
+              class="portfolio-button usingReactBtn"
+              data-content="usingReactContent"
+            >
+              React
+            </button>
+            <button
+              class="portfolio-button usingFigmaBtn"
+              data-content="usingFigmaContent"
+            >
+              Figma
+            </button>
+          </div>
+
+          <div class="portfolio-content usingLanguageContent">
+            <ul class="portfolio-cards usingLanguage"></ul>
+          </div>
+
+          <div class="portfolio-content usingReactContent portfolio">
+            <ul class="portfolio-cards usingReact"></ul>
+          </div>
+
+          <div class="portfolio-content usingFigmaContent portfolio">
+            <ul class="portfolio-cards usingFigma"></ul>
           </div>
         </section>
 
@@ -485,6 +514,9 @@
     <script src="/js/skills.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/aboutMe.js"></script>
-    <script src="/js/portfolio.js"></script>
+    <script src="/js/portLanguage.js"></script>
+    <script src="/js/portReact.js"></script>
+    <script src="/js/portFigma.js"></script>
+    <script src="/js/portfolioBtn.js"></script>
   </body>
 </html>
