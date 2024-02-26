@@ -29,6 +29,18 @@ const myInterests = [
     image: "/images/interests/console.png",
     interest: "Games",
   },
+  {
+    image: "/images/interests/basketball.png",
+    interest: "Sports",
+  },
+  {
+    image: "/images/interests/motorcycle.png",
+    interest: "Travel",
+  },
+  {
+    image: "/images/interests/coffee-cup.png",
+    interest: "Coffee",
+  },
 ];
 
 const displayMyInterests = function (interests) {
@@ -37,15 +49,14 @@ const displayMyInterests = function (interests) {
   interests.map((interest) => {
     const html = `
         <li>
-            <div class="card">
-            ${interest.image}
+            <div class="interest-card">
+            <img src=${interest.image} alt=${interest.image} class="interest-image">
             <p class="interest-title">${interest.interest}</p>
             </div>
         </li>
         `;
+    myInterest.insertAdjacentHTML("afterbegin", html);
   });
-
-  myInterest.insertAdjacentHTML("afterbegin", html);
 };
 
 displayMyInterests(myInterests);
