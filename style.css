@@ -583,14 +583,39 @@ svg {
 #portfolio {
 }
 
-#portfolio ul {
+#portfolio .portfolio-cards {
   display: flex;
   gap: 30px;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-#portfolio li {
+#portfolio .portfolio-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+#portfolio .portfolio-buttons button {
+  border: none;
+  background: none;
+  font-size: 18px;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+#portfolio .portfolio-buttons button:hover {
+  color: var(--primary-color);
+}
+
+.portfolio {
+  display: none;
+}
+
+.defaultBtn {
+  font-weight: 600;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color) !important;
 }
 
 #portfolio .portfolio-card {
